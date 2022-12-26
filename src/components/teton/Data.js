@@ -13,9 +13,14 @@ import {
   PlayIcon,
   ShieldCheckIcon,
   UserGroupIcon,
-  ViewGridIcon,
   XIcon,
 } from '@heroicons/react/outline'
+
+import {
+  ViewBoardsIcon,
+  PuzzleIcon,
+  ChartSquareBarIcon,
+} from '@heroicons/react/solid'
 
 const user = { 
   name: 'Chris Chilcoat', 
@@ -43,22 +48,24 @@ const data = [
 ]
 
 const layouts =  [
-  { name: 'Grid', href: 'teton-dashboard#/layout/grid', icon: OfficeBuildingIcon },
-  { name: 'Stacks', href: 'teton-dashboard#/layout/stack', icon: OfficeBuildingIcon },
+  { name: 'Grid', href: 'teton-dashboard#/layout/grid', icon: ViewBoardsIcon },
+  { name: 'Stacks', href: 'teton-dashboard#/layout/stack', icon: ViewBoardsIcon },
 ]
 
 const components =  [
-  { name: 'Alerts', href: 'teton-dashboard#/components/alerts', icon: InformationCircleIcon },
-  { name: 'Badges', href: 'teton-dashboard#/components/badges', icon: OfficeBuildingIcon },
-  { name: 'Buttons', href: 'teton-dashboard#/components/buttons', icon: OfficeBuildingIcon },
-  { name: 'Button Groups', href: 'teton-dashboard#/components/button-groups', icon: OfficeBuildingIcon },
-  { name: 'Cards', href: 'teton-dashboard#/components/cards', icon: OfficeBuildingIcon },
+  { name: 'Alerts', href: 'teton-dashboard#/components/alerts', icon: PuzzleIcon },
+  { name: 'Badges', href: 'teton-dashboard#/components/badges', icon: PuzzleIcon },
+  { name: 'Buttons', href: 'teton-dashboard#/components/buttons', icon: PuzzleIcon },
+  { name: 'Button Groups', href: 'teton-dashboard#/components/button-groups', icon: PuzzleIcon },
+  { name: 'Cards', href: 'teton-dashboard#/components/cards', icon: PuzzleIcon },
 
 ]
 
 const examples =  [
-  { name: 'Composer', href: 'teton-dashboard#/examples/composer', icon: OfficeBuildingIcon },
-  { name: 'Pager', href: 'teton-dashboard#/examples/pager', icon: OfficeBuildingIcon },
+  { name: 'Composer', href: 'teton-dashboard#/examples/composer', icon: ChartSquareBarIcon,
+},
+  { name: 'Pager', href: 'teton-dashboard#/examples/pager', icon: ChartSquareBarIcon,
+},
 
 ]
 

@@ -9,6 +9,7 @@ import {
   XIcon,
   DotsHorizontalIcon
 } from '@heroicons/react/outline'
+import { NavLink } from 'react-router-dom'
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -130,9 +131,9 @@ function Header({orientation, collapsed}) {
           <div className="flex flex-col flex-1 min-h-0 bg-gray-800">
             <div className="flex flex-col flex-1 pt-5 pb-4 overflow-y-auto scrollbar-hide">
               <div className={(collapsed ? 'justify-center' : '') + " flex items-center flex-shrink-0 px-4"}>
-                <a href="/" className="flex items-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500">
+                <NavLink to="/" className="flex items-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500">
                   <span className={(collapsed ? 'hidden' : '') + " ml-1 text-xl font-medium text-gray-300"}>Teton</span>
-                </a>
+                </NavLink>
               </div>
               <nav className="flex-1 px-2 mt-5 space-y-1 bg-gray-800">
                 <div class="p-3.5">

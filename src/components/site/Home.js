@@ -24,7 +24,7 @@ export default function SiteHeader() {
 	          </div>
 	          <div className="mt-3 sm:mt-0 sm:ml-3">
 	            <a
-	              href='https://github.com/ChrisChilcoat/teton-dashboard' 
+	              href='https://github.com/ChrisChilcoat/teton' 
 	              className="flex items-center justify-center w-full px-8 py-3 font-medium text-blue-900 bg-white border-2 border-transparent border-blue-900 rounded-full hover:opacity-80 md:py-4 md:text-lg md:px-10 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-opacity-60"
 	            >
 	              Clone on GitHub

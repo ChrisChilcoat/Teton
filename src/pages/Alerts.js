@@ -15,7 +15,7 @@ function Alerts() {
   return (
     <span>
       <span class='prose'>  
-        <h1>Alerts</h1>
+        <h1>Alerts </h1>
         <p>Custom alerts to quickly grab the users attention.</p>
         <h2>Examples</h2>
         <p>Use any of the available alert style types to quickly create a styled alert. Just modify the variant prop.</p>

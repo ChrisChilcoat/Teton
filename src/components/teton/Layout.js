@@ -1,11 +1,10 @@
-import React, { Fragment, useState } from 'react'
+import { Fragment, useState } from 'react'
+import { HashRouter, Route, Routes, Nav, NavLink, Link} from "react-router-dom";
+import { Dialog, Transition } from '@headlessui/react'
 import PropTypes from 'prop-types';
+import { MenuIcon, XIcon} from "@heroicons/react/outline";
 
-import { SwitchHorizontalIcon, SwitchVerticalIcon, SunIcon, MoonIcon, ChevronDoubleLeftIcon, ChevronDoubleRightIcon, ColorSwatchIcon } from '@heroicons/react/solid'
-
-import Button from './Button'
-import ButtonGroup from './ButtonGroup'
-import Panel from './Panel'
+import { user, data, company, resources, navigation, layouts, components, examples } from './Data'
 
 DashboardLayout.propTypes = {
   header: PropTypes.object.isRequired,
@@ -29,213 +28,162 @@ DashboardLayout.defaultProps = {
   theme: 'light',
 }
 
-export default function DashboardLayout({header, sidebar, main, aside, }) {
+export default function DashboardLayout({header, sidebar, main, aside }) {
 
-  const [headerPosition, setHeaderPosition] = useState('fixed') // fixed, static
-  const [headerOrientation, setheaderOrientation] = useState('vertical') // horizontal, vertical, hybrid
-  const [headerCollapsed, setHeaderCollapsed] = useState() // true, false
-  const [theme, setTheme] = useState() // true, false
-  
-  const handleSetHeaderPosition = () => {
-    headerPosition === 'fixed' ? setHeaderPosition('static') : setHeaderPosition('fixed');
-  }
-  
-  const handleSetHeaderOrientation = orientation => {
-    setheaderOrientation(orientation);
-  }
-  
-  const handleSetHeaderCollapsed = () => {
-    setHeaderCollapsed(headerCollapsed => !headerCollapsed)
-  }
+  const [sidebarOpen, setSidebarOpen] = useState(false)
 
-  const handleSetTheme = (theme) => {
-    setTheme(theme)
-  }
-  
-  const RenderHorizontalHeader = () => {
-    return (
-      <div className={(headerPosition === 'fixed' ? 'fixed z-40' : 'static') + " w-full mx-auto max-w-screen-2x"}>
-        {React.cloneElement(header, {orientation: 'horizontal'})}
-      </div>
-    )
-  }
-
-  const RenderVerticalHeader = () => {
-    return (
-      <div className="fixed flex h-screen overflow-hidden bg-gray-100">
-        {React.cloneElement(header, {orientation: 'vertical', collapsed: headerCollapsed})}
-      </div>
-    )
-  }
-
-  const RenderHybridHeader = () => {
+  const renderNav = props =>  {  
     return (
       <>
-        {RenderHorizontalHeader()}
-        {RenderVerticalHeader()}
+        <div className="flex items-center flex-shrink-0 px-4">
+          <Link to="/" className="flex items-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500">
+            <span className="ml-1 text-2xl font-medium text-gray-300">Teton</span>
+          </Link>
+        </div>
+        <nav className="flex-1 px-3 mt-5 space-y-1 bg-gray-800">
+          <div class="p-3.5">
+            <h3 className="text-sm font-medium tracking-wide text-gray-500 uppercase">Layouts</h3>                  
+            <ul className="mt-5 space-y-6">
+              {layouts.map((item) => (
+                <li key={item.name} className="flow-root">
+                  <NavLink
+                    exact
+                    to={item.href}
+                    className={({ isActive }) => (isActive ? 'bg-white' : 'hover:bg-gray-600') + ' flex itemq s-center p-3 -m-3 text-base font-medium text-gray-400 rounded-md'}
+                  >
+                    <item.icon className="flex-shrink-0 w-6 h-6 text-gray-400" aria-hidden="true" />
+                    <span className="ml-4">{item.name}</span>
+                  </NavLink>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div class="p-3.5">
+            <h3 className="text-sm font-medium tracking-wide text-gray-500 uppercase">Components</h3>
+            <ul className="mt-5 space-y-6">
+              {components.map((item) => (
+                <li key={item.name} className="flow-root">
+                  <NavLink
+                    exact
+                    to={item.href}
+                    className={({ isActive }) => (isActive ? 'bg-white' : 'hover:bg-gray-600') + ' flex itemq s-center p-3 -m-3 text-base font-medium text-gray-400 rounded-md'}
+                  >
+                    <item.icon className="flex-shrink-0 w-6 h-6 text-gray-400" aria-hidden="true" />
+                    <span className="ml-4">{item.name}</span>
+                  </NavLink>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div class="p-3.5">
+            <h3 className="text-sm font-medium tracking-wide text-gray-500 uppercase">Examples</h3>
+            <ul className="mt-5 space-y-6">
+              {examples.map((item) => (
+                <li key={item.name} className="flow-root">
+                  <NavLink
+                    exact
+                    to={item.href}
+                    className={({ isActive }) => (isActive ? 'bg-white' : 'hover:bg-gray-600') + ' flex itemq s-center p-3 -m-3 text-base font-medium text-gray-400 rounded-md'}
+                  >
+                    <item.icon className="flex-shrink-0 w-6 h-6 text-gray-400" aria-hidden="true" />
+                    <span className="ml-4">{item.name}</span>
+                  </NavLink>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </nav>
       </>
     )
   }
 
-  const RenderHeader = () => {
-    return (
-      <>
-        {headerOrientation === 'horizontal' && RenderHorizontalHeader()}
-        {headerOrientation === 'vertical' && RenderVerticalHeader()}
-        {headerOrientation === 'hybrid' && RenderHybridHeader()}
-      </>
-    )
-  }
-
-  const RenderSidebar = () => {
-    return (
-      <nav className={(headerPosition === 'fixed' ? '' : '') + " sticky top-0 hidden h-screen space-y-2 lg:block lg:col-span-3"}>
-        <div className="h-full pt-2 pr-4 overflow-scroll divide-y divide-gray-300">
-          {sidebar}
-        </div>
-      </nav>
-    )
-  }
-
-  const RenderMain = () => {
-    return (
-      <main 
-        aria-labelledby="main-heading" 
-        className={
-          (headerPosition === 'fixed' ? 'pt-14 mt-3' : 'mt-3') + 
-          " col-span-12 md:col-span-8 lg:col-span-6 dark:bg-gray-600"
-        }
-      >
-        <h1 id="main-heading" className="sr-only">Main Content</h1>
-        {main}
-      </main>
-    )
-  }
-
-  const RenderLayoutClasses = () => {
-    let className = 'grid grid-cols-12 gap-8 pt-10 mx-auto max-w-screen-2xl sm:px-6 lg:max-w-screen-2xl lg:px-2'
-    if (headerOrientation === 'vertical') {
-      headerCollapsed ? className += ' ml-20' : className += ' ml-64'
-    }
-    if (headerOrientation === 'horizontal') {
-      className += ' pt-10'
-    }
-    return className
-  }
-
-  const RenderAside = () => {
-    return (
-      <aside className={(headerPosition === 'fixed' ? 'pt-0' : '') + " sticky top-0 hidden h-screen col-span-4 space-y-4 md:block lg:col-span-3"}>
-        <div className="h-full pt-4 space-y-2 overflow-scroll divide-y divide-gray-300 top-20 scrollbar-hide">
-          {aside}
-        </div>
-      </aside>
-    )
-  }
-
-
-  const RenderLayoutConfigPanel = () => {
-    return (
-
-      <Panel title="Layout Options">
-        <div className="prose">
-          <h4>Header Orientation</h4>
-          <ButtonGroup
-            label='Layout Options'
-            variant="secondary"
-            size="sm"
-          >
-            <Button 
-              variant="secondary" 
-              text="Vertical" 
-              icon={<SwitchVerticalIcon/>} 
-              onClick={() => handleSetHeaderOrientation('vertical')} 
-              active   
-            />
-            <Button 
-              variant="success" 
-              text="Horizontal" 
-              icon={<SwitchHorizontalIcon/>} 
-              onClick={() => handleSetHeaderOrientation('horizontal')} 
-            />         
-          </ButtonGroup>
-          <h4>Header Position</h4>
-          <ButtonGroup
-            label='Header Position Options'
-            variant="secondary"
-            size="sm"
-          >
-            <Button 
-              variant="secondary" 
-              text="Fixed" 
-              disabled={headerOrientation === 'vertical' ? true : false}
-              active 
-              onClick={() => handleSetHeaderPosition('fixed')} 
-            />
-            <Button 
-              variant="secondary" 
-              text="Static" 
-              disabled={headerOrientation === 'vertical' ? true : false} 
-              onClick={() => handleSetHeaderPosition('static')} 
-            />
-          </ButtonGroup>
-          <h4>Sidebar Position</h4>
-          <ButtonGroup
-            label='Sidebar Options'
-            variant="secondary"
-            size="sm"
-          >
-            <Button 
-              variant="secondary" 
-              text="Expanded" 
-              icon={<ChevronDoubleRightIcon />}
-              disabled={headerOrientation === 'horizontal' ? true : false}
-              onClick={() => handleSetHeaderCollapsed(false)} 
-              active 
-            />
-            <Button 
-              variant="secondary" 
-              text="Collapsed" 
-              icon={<ChevronDoubleLeftIcon />}
-              disabled={headerOrientation === 'horizontal' ? true : false}
-              onClick={() => handleSetHeaderCollapsed(true)} 
-            />
-          </ButtonGroup>
-          <h4>Theme</h4>
-          <ButtonGroup
-            label='Themes'
-            variant="secondary"
-            size="sm"
-          >
-            <Button 
-              icon={<SunIcon />}
-              text="Light" 
-              active 
-              onClick={() => handleSetTheme('light')} 
-            />
-            <Button 
-              icon={<MoonIcon />}
-              text="Dark" 
-              onClick={() => handleSetTheme('dark')} 
-            />
-          </ButtonGroup>
-        </div>
-      </Panel>
-    
-    )
-  }
-  
   return (
-    <div className={theme ? theme : ''}>
-      <div className={"min-h-screen bg-gray-100 dark:bg-gray-600"}>
-        {RenderHeader()}
-        <div className={RenderLayoutClasses()}>
-          {RenderSidebar()}
-          {RenderMain()}
-          {RenderAside()}
+    <>
+      <div>
+        <Transition.Root show={sidebarOpen} as={Fragment}>
+          <Dialog as="div" className="relative z-40 md:hidden" onClose={setSidebarOpen}>
+            <Transition.Child
+              as={Fragment}
+              enter="transition-opacity ease-linear duration-300"
+              enterFrom="opacity-0"
+              enterTo="opacity-100"
+              leave="transition-opacity ease-linear duration-300"
+              leaveFrom="opacity-100"
+              leaveTo="opacity-0"
+            >
+              <div className="fixed inset-0 bg-gray-600 bg-opacity-75" />
+            </Transition.Child>
+
+            <div className="fixed inset-0 z-40 flex">
+              <Transition.Child
+                as={Fragment}
+                enter="transition ease-in-out duration-300 transform"
+                enterFrom="-translate-x-full"
+                enterTo="translate-x-0"
+                leave="transition ease-in-out duration-300 transform"
+                leaveFrom="translate-x-0"
+                leaveTo="-translate-x-full"
+              >
+                <Dialog.Panel className="relative flex w-full max-w-xs flex-1 flex-col bg-gray-800">
+                  <Transition.Child
+                    as={Fragment}
+                    enter="ease-in-out duration-300"
+                    enterFrom="opacity-0"
+                    enterTo="opacity-100"
+                    leave="ease-in-out duration-300"
+                    leaveFrom="opacity-100"
+                    leaveTo="opacity-0"
+                  >
+                    <div className="absolute top-0 right-0 -mr-12 pt-2">
+                      <button
+                        type="button"
+                        className="ml-1 flex h-10 w-10 items-center justify-center rounded-full focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                        onClick={() => setSidebarOpen(false)}
+                      >
+                        <span className="sr-only">Close sidebar</span>
+                        <XIcon className="h-6 w-6 text-white" aria-hidden="true" />
+                      </button>
+                    </div>
+                  </Transition.Child>
+                  <div className="h-0 flex-1 overflow-y-auto pt-5 pb-4">
+                    {renderNav()}
+                  </div>
+                </Dialog.Panel>
+              </Transition.Child>
+              <div className="w-14 flex-shrink-0">{/* Force sidebar to shrink to fit close icon */}</div>
+            </div>
+          </Dialog>
+        </Transition.Root>
+
+        {/* Static sidebar for desktop */}
+        <div className="hidden md:fixed md:inset-y-0 md:flex md:w-64 md:flex-col">
+          {/* Sidebar component, swap this element with another sidebar if you like */}
+          <div className="flex min-h-0 flex-1 flex-col bg-gray-800">
+            <div className="flex flex-1 flex-col overflow-y-auto pt-5 pb-4">
+              {renderNav()}
+            </div>
+          </div>
         </div>
-      </div> 
-      {/* RenderLayoutConfigPanel() */}
-    </div>
+        <div className="flex flex-1 flex-col md:pl-64">
+          <div className="sticky top-0 z-10 bg-gray-100 pl-1 pt-1 sm:pl-3 sm:pt-3 md:hidden">
+            <button
+              type="button"
+              className="-ml-0.5 -mt-0.5 inline-flex h-12 w-12 items-center justify-center rounded-md text-gray-500 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+              onClick={() => setSidebarOpen(true)}
+            >
+              <span className="sr-only">Open sidebar</span>
+              <MenuIcon className="h-6 w-6" aria-hidden="true" />
+            </button>
+          </div>
+          <main className="flex-1">
+            <div className="py-6">
+              <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-8">
+                {main}
+              </div>
+            </div>
+          </main>
+        </div>
+      </div>
+    </>
   )
 }

@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/teton/static/css/main.400561cb.css",
-    "main.js": "/teton/static/js/main.49094527.js",
+    "main.css": "/teton/static/css/main.0bbe9491.css",
+    "main.js": "/teton/static/js/main.383455b5.js",
     "index.html": "/teton/index.html",
-    "main.400561cb.css.map": "/teton/static/css/main.400561cb.css.map",
-    "main.49094527.js.map": "/teton/static/js/main.49094527.js.map"
+    "main.0bbe9491.css.map": "/teton/static/css/main.0bbe9491.css.map",
+    "main.383455b5.js.map": "/teton/static/js/main.383455b5.js.map"
   },
   "entrypoints": [
-    "static/css/main.400561cb.css",
-    "static/js/main.49094527.js"
+    "static/css/main.0bbe9491.css",
+    "static/js/main.383455b5.js"
   ]
 }

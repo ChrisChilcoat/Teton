@@ -28,10 +28,6 @@ const user = {
   avatarUrl: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=32&h=32&q=80'
 }
 
-const dashboards = { 
-  name: 'Dashboard', 
-  href: '#'
-}
 
 const breadcrumb = [
   { name: 'Teton', href: '/about'},
@@ -48,23 +44,23 @@ const data = [
 ]
 
 const layouts =  [
-  { name: 'Grid', href: 'teton-dashboard#/layout/grid', icon: ViewBoardsIcon },
-  { name: 'Stacks', href: 'teton-dashboard#/layout/stack', icon: ViewBoardsIcon },
+  { name: 'Grid', href: '/layout/grid', icon: ViewBoardsIcon },
+  { name: 'Stacks', href: '/layout/stack', icon: ViewBoardsIcon },
 ]
 
 const components =  [
-  { name: 'Alerts', href: 'teton-dashboard#/components/alerts', icon: PuzzleIcon },
-  { name: 'Badges', href: 'teton-dashboard#/components/badges', icon: PuzzleIcon },
-  { name: 'Buttons', href: 'teton-dashboard#/components/buttons', icon: PuzzleIcon },
-  { name: 'Button Groups', href: 'teton-dashboard#/components/button-groups', icon: PuzzleIcon },
-  { name: 'Cards', href: 'teton-dashboard#/components/cards', icon: PuzzleIcon },
+  { name: 'Alerts', href: '/components/alerts', icon: PuzzleIcon },
+  { name: 'Badges', href: '/components/badges', icon: PuzzleIcon },
+  { name: 'Buttons', href: '/components/buttons', icon: PuzzleIcon },
+  { name: 'Button Groups', href: '/components/button-groups', icon: PuzzleIcon },
+  { name: 'Cards', href: '/components/cards', icon: PuzzleIcon },
 
 ]
 
 const examples =  [
-  { name: 'Composer', href: 'teton-dashboard#/examples/composer', icon: ChartSquareBarIcon,
+  { name: 'Composer', href: '/examples/composer', icon: ChartSquareBarIcon,
 },
-  { name: 'Pager', href: 'teton-dashboard#/examples/pager', icon: ChartSquareBarIcon,
+  { name: 'Pager', href: '/examples/pager', icon: ChartSquareBarIcon,
 },
 
 ]

@@ -23,8 +23,10 @@ function ButtonGroups() {
         class="w-full p-4 text-center m-auto space-y-2"
         component={
           <>
+            <ButtonGroup variant="primary">
               <Button text="Button" />
               <Button text="Button" />
+            </ButtonGroup>
             <ButtonGroup variant="secondary">
               <Button text="Button" />
               <Button text="Button" />

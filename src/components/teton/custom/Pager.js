@@ -5,24 +5,6 @@ import Button from '../Button';
 
 import { ChevronRightIcon, ChevronLeftIcon } from '@heroicons/react/outline';
 
-/*
-  This example requires Tailwind CSS v2.0+ 
-  
-  This example requires some changes to your index.css file:
-  
-  ```
-  @layer utilities {
-    .scrollbar-hide::-webkit-scrollbar {
-      display: none;
-    }
-    .scrollbar-hide:{
-      -ms-overflow-style: none;  // IE and Edge
-      scrollbar-width: none;  // Firefox
-    }
-  }
-  ```
-*/
-
 const people = [
   { name: 'Leslie Alexander', imageUrl: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80'},
   { name: 'Dries Vincent', imageUrl: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80'},

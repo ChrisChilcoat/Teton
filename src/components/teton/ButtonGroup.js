@@ -24,6 +24,7 @@ function ButtonGroup({ children, variant, label, size, rounded}) {
   let middle = 'rounded-r-none rounded-l-none mr-0 ml-0'
   let last = ((rounded ? 'rounded-r-full' : '') + ' rounded-l-none ml-0')
 
+  
   const arrayChildren = Children.toArray(children);
 
   return (

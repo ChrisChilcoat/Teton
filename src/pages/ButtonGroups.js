@@ -13,7 +13,7 @@ function ButtonGroups() {
   return (
     <span>
       <span class='prose'>  
-        <h1>Button Groups</h1>
+        <h1>Button Groups </h1>
         <p>Button Groups work in combination with the Button component. Just wrap your Buttons in a Button Group component and voilà!</p>
         <h2>Examples</h2>
         <p>Use any of the available button group style types to quickly create a styled button groups. Just modify the variant prop.</p>

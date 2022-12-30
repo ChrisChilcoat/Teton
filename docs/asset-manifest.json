@@ -1,13 +1,14 @@
 {
   "files": {
     "main.css": "/teton/static/css/main.5c8f36ea.css",
-    "main.js": "/teton/static/js/main.04049bc6.js",
+    "main.js": "/teton/static/js/main.dcca8ae2.js",
+    "static/media/mountain.jpg": "/teton/static/media/mountain.bbcf2644469c317193e2.jpg",
     "index.html": "/teton/index.html",
     "main.5c8f36ea.css.map": "/teton/static/css/main.5c8f36ea.css.map",
-    "main.04049bc6.js.map": "/teton/static/js/main.04049bc6.js.map"
+    "main.dcca8ae2.js.map": "/teton/static/js/main.dcca8ae2.js.map"
   },
   "entrypoints": [
     "static/css/main.5c8f36ea.css",
-    "static/js/main.04049bc6.js"
+    "static/js/main.dcca8ae2.js"
   ]
 }

@@ -54,6 +54,7 @@ const components =  [
   { name: 'Buttons', href: '/components/buttons', icon: PuzzleIcon },
   { name: 'Button Groups', href: '/components/button-groups', icon: PuzzleIcon },
   { name: 'Cards', href: '/components/cards', icon: PuzzleIcon },
+  { name: 'Carousel', href: '/components/carousel', icon: PuzzleIcon },
 
 ]
 

@@ -16,6 +16,7 @@ import FormsPage from "./pages/FormsPage"
 import CardsPage from "./pages/CardsPage"
 import ComposerPage from "./pages/ComposerPage"
 import PagerPage from "./pages/PagerPage"
+import CarouselPage from "./pages/CarouselPage"
 import { default as TetonHeader } from "./components/teton/Header"
 
 function ScrollToTop() {
@@ -107,6 +108,15 @@ export default function App() {
             <ScrollToTop/>
           </>
         }/>  
+        <Route path="/components/carousel" element={  
+          <>      
+            <DashboardLayout 
+              header={<TetonHeader/>}
+              main={<CarouselPage />} 
+            />
+            <ScrollToTop/>
+          </>
+        }/> 
         <Route path="/examples/composer" element={   
           <>     
             <DashboardLayout 

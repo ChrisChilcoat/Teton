@@ -1,5 +1,7 @@
 import React, { useState, Fragment } from 'react'
 
+import { NavLink} from "react-router-dom";
+
 import { Popover, Transition } from '@headlessui/react'
 
 import { user, data, company, resources, navigation, layouts, components, examples } from './Data'
@@ -9,7 +11,6 @@ import {
   XIcon,
   DotsHorizontalIcon
 } from '@heroicons/react/outline'
-import { NavLink } from 'react-router-dom'
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -51,17 +52,18 @@ function Header({orientation, collapsed}) {
                             <div className="relative mx-auto lg:grid">
                               <nav className="grid px-4 py-8 bg-white gap-y-10 sm:grid-cols-4 sm:gap-x-8 sm:py-12 sm:px-6 lg:px-8 xl:pr-12">
                                 <div>
-                                  <h3 className="text-sm font-medium tracking-wide text-gray-500 uppercase">Components</h3>
+                                  <h3 className="text-sm font-medium tracking-wide text-gray-500 uppercase">Components x</h3>
                                   <ul role="list" className="mt-5 space-y-6">
                                     {components.map((item) => (
                                       <li key={item.name} className="flow-root">
-                                        <a
-                                          href={item.href}
-                                          className="flex items-center p-3 -m-3 text-base font-medium text-gray-900 rounded-md hover:bg-gray-50"
+                                        <NavLink
+                                          exact
+                                          to={item.href}
+                                          className={({ isActive }) => (isActive ? 'bg-white' : 'hover:bg-gray-600') + ' flex itemq s-center p-3 -m-3 text-base font-medium text-gray-400 rounded-md'}
                                         >
                                           <item.icon className="flex-shrink-0 w-6 h-6 text-gray-400" aria-hidden="true" />
                                           <span className="ml-4">{item.name}</span>
-                                        </a>
+                                        </NavLink>
                                       </li>
                                     ))}
                                   </ul>
@@ -144,13 +146,14 @@ function Header({orientation, collapsed}) {
                   <ul className="mt-5 space-y-6">
                     {layouts.map((item) => (
                       <li key={item.name} className="flow-root">
-                        <a
-                          href={item.href}
-                          className={(collapsed ? "justify-center" : "") + " flex itemq s-center p-3 -m-3 text-base font-medium text-gray-400 rounded-md hover:bg-gray-50"}
+                        <NavLink
+                          exact
+                          to={item.href}
+                          className={({ isActive }) => (isActive ? 'bg-white' : 'hover:bg-gray-600') + ' flex itemq s-center p-3 -m-3 text-base font-medium text-gray-400 rounded-md'}
                         >
                           <item.icon className="flex-shrink-0 w-6 h-6 text-gray-400" aria-hidden="true" />
-                          {!collapsed && <span className="ml-4">{item.name}</span>}
-                        </a>
+                          <span className="ml-4">{item.name}</span>
+                        </NavLink>
                       </li>
                     ))}
                   </ul>
@@ -163,13 +166,14 @@ function Header({orientation, collapsed}) {
                   <ul className="mt-5 space-y-6">
                     {components.map((item) => (
                       <li key={item.name} className="flow-root">
-                        <a
-                          href={item.href}
-                          className={(collapsed ? "justify-center" : "") + " flex items-center p-3 -m-3 text-base font-medium text-gray-400 rounded-md hover:bg-gray-50"}
+                        <NavLink
+                          exact
+                          to={item.href}
+                          className={({ isActive }) => (isActive ? 'bg-white' : 'hover:bg-gray-600') + ' flex itemq s-center p-3 -m-3 text-base font-medium text-gray-400 rounded-md'}
                         >
                           <item.icon className="flex-shrink-0 w-6 h-6 text-gray-400" aria-hidden="true" />
-                          {!collapsed && <span className="ml-4">{item.name}</span>}
-                        </a>
+                          <span className="ml-4">{item.name}</span>
+                        </NavLink>
                       </li>
                     ))}
                   </ul>
@@ -182,13 +186,14 @@ function Header({orientation, collapsed}) {
                   <ul className="mt-5 space-y-6">
                     {examples.map((item) => (
                       <li key={item.name} className="flow-root">
-                        <a
-                          href={item.href}
-                          className={(collapsed ? "justify-center" : "") + " flex items-center p-3 -m-3 text-base font-medium text-gray-400 rounded-md hover:bg-gray-50"}
+                        <NavLink
+                          exact
+                          to={item.href}
+                          className={({ isActive }) => (isActive ? 'bg-white' : 'hover:bg-gray-600') + ' flex itemq s-center p-3 -m-3 text-base font-medium text-gray-400 rounded-md'}
                         >
                           <item.icon className="flex-shrink-0 w-6 h-6 text-gray-400" aria-hidden="true" />
-                          {!collapsed && <span className="ml-4">{item.name}</span>}
-                        </a>
+                          <span className="ml-4">{item.name}</span>
+                        </NavLink>
                       </li>
                     ))}
                   </ul>

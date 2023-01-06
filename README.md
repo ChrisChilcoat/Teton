@@ -1,6 +1,6 @@
 # Teton Dashboard
 
-A collection of widgets and layouts from popular social media applications.
+A Front-End Framework, Built with React and Tailwind CSS and is Still Cooking in the Development Oven. 
 
 [View Demo](https://chrischilcoat.github.io/teton/)
 

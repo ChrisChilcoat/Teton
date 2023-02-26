@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import PropTypes from 'prop-types';
+import React, { useState, useEffect } from "react"
+import PropTypes from 'prop-types'
 
 Input.propTypes = {
   placeholder: PropTypes.string,
@@ -8,7 +8,6 @@ Input.propTypes = {
   type: PropTypes.string,
   size: PropTypes.string,
   invalid: PropTypes.bool,
-
   required: PropTypes.bool,
   readOnly: PropTypes.bool,
   ariaLabel: PropTypes.string,
@@ -32,12 +31,11 @@ Input.defaultProps = {
 
 function Input(props) {
 
-  let _size
-
+  let _size;
   let _base = "shadow-sm block w-full rounded-md";
-  let _state = props.invalid ? 'border-red-600 text-red-600 bg-red-50 focus:ring-red-600 focus:border-red-600' : 'border-gray-300 focus:ring-blue-500 focus:border-blue-500'
-  let _suffixClasses = props.suffixClasses ? props.suffixClasses : ''
-  let _disabled = props.disabled ? 'opacity-50' : null
+  let _state = props.invalid ? 'border-red-600 text-red-600 bg-red-50 focus:ring-red-600 focus:border-red-600' : 'border-gray-300 focus:ring-blue-500 focus:border-blue-500';
+  let _suffixClasses = props.suffixClasses ? props.suffixClasses : '';
+  let _disabled = props.disabled ? 'opacity-50' : null;
 
   const [inputClasses, setInputClasses] = useState("hidden");
 

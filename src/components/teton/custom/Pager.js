@@ -1,9 +1,7 @@
-import React from "react";
-
-import Card from '../Card';
-import Button from '../Button';
-
-import { ChevronRightIcon, ChevronLeftIcon } from '@heroicons/react/outline';
+import { useState, createRef } from 'react'
+import { ChevronRightIcon, ChevronLeftIcon } from '@heroicons/react/outline'
+import Card from '../Card'
+import Button from '../Button'
 
 const people = [
   { name: 'Leslie Alexander', imageUrl: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80'},
@@ -42,9 +40,9 @@ const people = [
 ]
 
 function Pager() {
-  const [showLeftBtn, setShowLeftBtn] = React.useState(false);
-  const [showRightBtn, setShowRightBtn] = React.useState(true)
-  const pager = React.createRef();
+  const [showLeftBtn, setShowLeftBtn] = useState(false);
+  const [showRightBtn, setShowRightBtn] = useState(true)
+  const pager = createRef();
 
   const scrollRight = () => {
     pager.current.scroll({
@@ -70,7 +68,7 @@ function Pager() {
 
   const LeftBtn = () => (
     <span class="absolute items-center hidden sm:inline-flex left-5 top-2">
-      <Button onClick={() => scrollLeft()} icon={<ChevronLeftIcon/>} iconSize="xl" variant="outline-light" size="lg" rounded>
+      <Button onClick={() => scrollLeft()} icon={<ChevronLeftIcon/>} iconSize="xl" variant="outline_light" size="lg" rounded>
         <span class="sr-only">Previous</span>
       </Button>
     </span>
@@ -78,7 +76,7 @@ function Pager() {
   
   const RightBtn = () => (
     <span class="absolute items-center hidden sm:inline-flex right-5 top-2">
-      <Button onClick={() => scrollRight()} icon={<ChevronRightIcon/>} iconSize="xl" variant="outline-light" size="lg" rounded>
+      <Button onClick={() => scrollRight()} icon={<ChevronRightIcon/>} iconSize="xl" variant="outline_light" size="lg" rounded>
         <span class="sr-only">Next</span>
       </Button>
     </span>
@@ -91,7 +89,7 @@ function Pager() {
         <div ref={pager} onScroll={setButtonState} class="w-full overflow-x-auto scrollbar-hide">
           <div class="whitespace-nowrap pt-2.5 px-4 pb-3 space-x-2.5">
             {people.map((person) => (
-              <Button variant="dark" size="md" rounded> 
+              <Button variant="light" size="md" rounded > 
                 <span className="sr-only">{person.name}</span> 
                 <img src={person.imageUrl} aria-hidden="true" alt="touha98" class="object-cover w-full h-full top-0 absolute bottom-0 left-0 right-0 hover:opacity-80 transition duration-300 ease-in-out rounded-full"></img> 
                 <span className="absolute bottom-0 right-0 block h-2.5 w-2.5 rounded-full ring-2 ring-white bg-green-400" />

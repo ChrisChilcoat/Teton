@@ -106,56 +106,56 @@ function ButtonGroups() {
           <>
             <ButtonGroup
               label='button group'
-              variant="outline-primary"
+              variant="outline_primary"
             >
               <Button text="Button" />
               <Button text="Button" />
             </ButtonGroup>
             <ButtonGroup
               label='button group'
-              variant="outline-secondary"
+              variant="outline_secondary"
             >
               <Button text="Button" />
               <Button text="Button" />
             </ButtonGroup>
             <ButtonGroup
               label='button group'
-              variant="outline-success"
+              variant="outline_success"
             >
               <Button text="Button" />
               <Button text="Button" />
             </ButtonGroup>
             <ButtonGroup
               label='button group'
-              variant="outline-warning"
+              variant="outline_warning"
             >
               <Button text="Button" />
               <Button text="Button" />
             </ButtonGroup>
             <ButtonGroup
               label='button group'
-              variant="outline-danger"
+              variant="outline_danger"
             >
               <Button text="Button" />
               <Button text="Button" />
             </ButtonGroup>
             <ButtonGroup
               label='button group'
-              variant="outline-info"
+              variant="outline_info"
             >
               <Button text="Button" />
               <Button text="Button" />
             </ButtonGroup>
             <ButtonGroup
               label='button group'
-              variant="outline-light"
+              variant="outline_light"
             >
               <Button text="Button" />
               <Button text="Button" />
             </ButtonGroup>
             <ButtonGroup
               label='button group'
-              variant="outline-dark"
+              variant="outline_dark"
             >
               <Button text="Button" />
               <Button text="Button" />
@@ -164,35 +164,35 @@ function ButtonGroups() {
         } 
         syntaxBlock={
           '<> \n' +
-          '  <ButtonGroup variant="outline-primary"> \n' +
+          '  <ButtonGroup variant="outline_primary"> \n' +
           '    <Button text="Button" /> \n' +
           '    <Button text="Button" /> \n' +
           '  </ButtonGroup> \n' +
-          '  <ButtonGroup variant="outline-secondary"> \n' +
+          '  <ButtonGroup variant="outline_secondary"> \n' +
           '    <Button text="Button" /> \n' +
           '    <Button text="Button" /> \n' +
           '  </ButtonGroup> \n' +
-          '  <ButtonGroup variant="outline-success"> \n' +
+          '  <ButtonGroup variant="outline_success"> \n' +
           '    <Button text="Button" /> \n' +
           '    <Button text="Button" /> \n' +
           '  </ButtonGroup> \n' +
-          '  <ButtonGroup variant="outline-warning"> \n' +
+          '  <ButtonGroup variant="outline_warning"> \n' +
           '    <Button text="Button" /> \n' +
           '    <Button text="Button" /> \n' +
           '  </ButtonGroup> \n' +
-          '  <ButtonGroup variant="outline-danger"> \n' +
+          '  <ButtonGroup variant="outline_danger"> \n' +
           '    <Button text="Button" /> \n' +
           '    <Button text="Button" /> \n' +
           '  </ButtonGroup> \n' +
-          '  <ButtonGroup variant="outline-info"> \n' +
+          '  <ButtonGroup variant="outline_info"> \n' +
           '    <Button text="Button" /> \n' +
           '    <Button text="Button" /> \n' +
           '  </ButtonGroup> \n' +
-          '  <ButtonGroup variant="outline-light"> \n' +
+          '  <ButtonGroup variant="outline_light"> \n' +
           '    <Button text="Button" /> \n' +
           '    <Button text="Button" /> \n' +
           '  </ButtonGroup> \n' +
-          '  <ButtonGroup variant="outline-dark"> \n' +
+          '  <ButtonGroup variant="outline_dark"> \n' +
           '    <Button text="Button" /> \n' +
           '    <Button text="Button" /> \n' +
           '  </ButtonGroup> \n' +
@@ -217,7 +217,7 @@ function ButtonGroups() {
               <Button text="Button" />
             </ButtonGroup>
             <ButtonGroup
-              variant="secondary"
+              variant="light"
               rounded
             >
               <Button text="Button" />
@@ -349,7 +349,7 @@ function ButtonGroups() {
                     </tr>          
                     <tr>
                       <td className="px-6 py-2 text-sm font-medium text-gray-900 whitespace-nowrap">variant</td>
-                      <td className="px-6 py-2 text-sm text-gray-500 whitespace-nowrap">'primary' <br/> 'secondary' <br/> 'success' <br/> 'danger' <br/> 'warning' <br/> 'info' <br/> 'light' <br/> 'dark' <br/> 'outline-primary' <br/> 'outline-secondary' <br/> 'outline-success' <br/> 'outline-danger' <br/> 'outline-warning' <br/> 'outline-info' <br/> 'outline-light' <br/> 'outline-dark' </td>
+                      <td className="px-6 py-2 text-sm text-gray-500 whitespace-nowrap">'primary' <br/> 'secondary' <br/> 'success' <br/> 'danger' <br/> 'warning' <br/> 'info' <br/> 'light' <br/> 'dark' <br/> 'outline_primary' <br/> 'outline_secondary' <br/> 'outline_success' <br/> 'outline_danger' <br/> 'outline_warning' <br/> 'outline_info' <br/> 'outline_light' <br/> 'outline_dark' </td>
                       <td className="px-6 py-2 text-sm text-gray-500 whitespace-nowrap">'secondary'</td>
                       <td className="px-6 py-2 text-sm text-gray-500 whitespace-nowrap">Sets button color</td>
                     </tr>

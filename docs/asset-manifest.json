@@ -1,14 +1,17 @@
 {
   "files": {
-    "main.css": "/teton/static/css/main.222fae2f.css",
-    "main.js": "/teton/static/js/main.815d848a.js",
+    "main.css": "/teton/static/css/main.97286bd7.css",
+    "main.js": "/teton/static/js/main.70a0601a.js",
+    "static/media/Arizone.jpg": "/teton/static/media/Arizone.b93984e0f5c619c006cb.jpg",
     "static/media/mountain.jpg": "/teton/static/media/mountain.bbcf2644469c317193e2.jpg",
+    "static/media/lake.jpg": "/teton/static/media/lake.97263f6c7e38532d5497.jpg",
+    "static/media/landscape.jpg": "/teton/static/media/landscape.291fe7cc9819d7227d4b.jpg",
     "index.html": "/teton/index.html",
-    "main.222fae2f.css.map": "/teton/static/css/main.222fae2f.css.map",
-    "main.815d848a.js.map": "/teton/static/js/main.815d848a.js.map"
+    "main.97286bd7.css.map": "/teton/static/css/main.97286bd7.css.map",
+    "main.70a0601a.js.map": "/teton/static/js/main.70a0601a.js.map"
   },
   "entrypoints": [
-    "static/css/main.222fae2f.css",
-    "static/js/main.815d848a.js"
+    "static/css/main.97286bd7.css",
+    "static/js/main.70a0601a.js"
   ]
 }

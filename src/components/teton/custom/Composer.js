@@ -18,7 +18,7 @@ function Composer( props ) {
             </Button>
           </div> 
           <div>
-            <Button variant="outline-light" justify="left" text="What's on your mind, Chris?" rounded block />
+            <Button variant="outline_light" justify="left" text="What's on your mind, Chris?" rounded block />
           </div> 
         </Stack> 
         <div class="border-t border-black-400 pt-3 mt-3">

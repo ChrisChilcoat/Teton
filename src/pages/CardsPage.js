@@ -1,14 +1,15 @@
-import React, {Fragment} from 'react'
-
-import { Dialog, Transition } from '@headlessui/react'
-import { XIcon, ExclamationIcon } from '@heroicons/react/outline'
-import { LinkIcon, PlusSmIcon, QuestionMarkCircleIcon, BellIcon, SwitchHorizontalIcon, SwitchVerticalIcon, DotsHorizontalIcon, ChevronDownIcon} from '@heroicons/react/solid'
-
 import Card from '../components/teton/Card'
-
+import Stack from '../components/teton/Stack'
 import Showcase from '../components/site/Showcase'
+import Container from '../components/teton/Container'
+import Row from '../components/teton/Row'
+import Col from '../components/teton/Col'
+import arizona from '../images/Arizone.jpg'
+import lake from '../images/lake.jpg'
+import landscape from '../images/landscape.jpg'
 
 function CardsPage() {
+
   return (
     <span>
       <span class='prose'>  
@@ -21,7 +22,7 @@ function CardsPage() {
       <Showcase 
         class="w-full p-4 m-auto space-y-2" // fix this...
         component={
-          <>  
+          <>   
             <Card>
               <h3 class="text-lg font-medium">
                 Default
@@ -29,7 +30,7 @@ function CardsPage() {
               <p class="mt-2 text-sm opacity-80">
                 Doloribus dolores nostrum quia qui natus officia quod et dolorem. Sit repellendus qui ut at blanditiis et quo et molestiae.
               </p>
-            </Card> 
+            </Card>    
             <Card variant="primary">
               <h3 class="text-lg font-medium">
                 Primary
@@ -81,44 +82,126 @@ function CardsPage() {
           </>
         } 
         syntaxBlock={
-            `<Card \n` +
-            `  variant="primary" \n` + 
-            `  icon={<ExclamationIcon/>} \n` +
-            `  text='Primary' \n` +
-            `  subtext={["Something needs your attention. ", <a href="/" className="underline">Check it out!</a>]} \n` +
-            `/> \n` + 
-            `<Card \n` +
-            `  variant="secondary" \n` + 
-            `  icon={<ExclamationIcon/>} \n` +
-            `  text='Secondary' \n` +
-            `  subtext={["Something needs your attention. ", <a href="/" className="underline">Check it out!</a>]} \n` +
-            `/> \n` + 
-            `<Card \n` +
-            `  variant="success" \n` + 
-            `  icon={<ExclamationIcon/>} \n` +
-            `  text='Success' \n` +
-            `  subtext={["Something needs your attention. ", <a href="/" className="underline">Check it out!</a>]} \n` +
-            `/> \n` +
-            `<Card \n` + 
-            `  variant="warning" \n` + 
-            `  icon={<ExclamationIcon/>} \n` +
-            `  text='Warning' \n` +
-            `  subtext={["Something needs your attention. ", <a href="/" className="underline">Check it out!</a>]} \n` +
-            `/> \n` +
-            `<Card \n` + 
-            `  variant="danger" \n` +
-            `  icon={<ExclamationIcon/>} \n` +
-            `  text='Danger' \n` +
-            `  subtext={["Something needs your attention. ", <a href="/" className="underline">Check it out!</a>]} \n` +
-            `/> \n` +
-            `<Card \n` +
-            `  variant="info" \n` + 
-            `  icon={<ExclamationIcon/>} \n` +
-            `  text='Info' \n` +
-            `  subtext={["Something needs your attention. ", <a href="/" className="underline">Check it out!</a>]} \n` +
-            `/>`}
+          `<Card> \n` +
+          `  <h3 class="text-lg font-medium">Default</h3> \n` +
+          `  <p class="mt-2 text-sm opacity-80">Doloribus dolores nostrum...</p> \n` +
+          `</Card>  \n` +   
+          `<Card variant="primary"> \n` +
+          `  <h3 class="text-lg font-medium">Primary</h3> \n` +
+          `  <p class="mt-2 text-sm opacity-80">Doloribus dolores nostrum...</p> \n` +
+          `</Card>`}
         title="Cards" 
       />
+      <span class='prose'>  
+        <h2>Aspect Ratios</h2>
+        <p>Quickly change the default aspect ratio of your card by using the AspectRatio option.</p>
+      </span>
+      <br/>      
+      <Showcase 
+        class="w-full py-4 m-auto space-y-2" // fix this...
+        component={
+          <Container>
+            <Row cols="3">
+              <Col>
+                <Card size="xxl" aspectRatio='OneByFour'>
+                  <h3 class="text-lg font-medium">
+                    One By Four
+                  </h3>
+                  <p class="mt-2 text-sm opacity-80">
+                    Doloribus dolores nostrum quia qui natus officia quod et dolorem. Sit repellendus qui ut at blanditiis et quo et molestiae.
+                  </p>
+                </Card> 
+              </Col>
+              <Col>
+                <Card size="xxl" aspectRatio='oneByOne'>
+                  <h3 class="text-lg font-medium">
+                    One By One
+                  </h3>
+                  <p class="mt-2 text-sm opacity-80">
+                    Doloribus dolores nostrum quia qui natus officia quod et dolorem. Sit repellendus qui ut at blanditiis et quo et molestiae.
+                  </p>
+                </Card> 
+              </Col>
+              <Col>
+                <Card size="xxl" aspectRatio='threeByFour'>
+                  <h3 class="text-lg font-medium">
+                    Three By Four
+                  </h3>
+                  <p class="mt-2 text-sm opacity-80">
+                    Doloribus dolores nostrum quia qui natus officia quod et dolorem. Sit repellendus qui ut at blanditiis et quo et molestiae.
+                  </p>
+                </Card> 
+              </Col>
+            </Row>
+          </Container>
+        } 
+        syntaxBlock={
+          `<Card aspectRatio='OneByFour'> \n` +
+          `  ...  \n` +
+          `</Card> \n` + 
+          `<Card aspectRatio='oneByOne'> \n` +
+          `  ...  \n` +
+          `</Card> \n` + 
+          `<Card aspectRatio='threeByFour'> \n` +
+          `  ...  \n` +
+          `</Card>` 
+        }
+        title="Cards with Aspect Ratios" 
+      />
+
+<span class='prose'>  
+        <h2>Background Images</h2>
+        <p>Pass a background image to a card using the backgroundImg option.</p>
+      </span>
+      <br/>      
+      <Showcase 
+        class="w-full py-4 m-auto space-y-2" // fix this...
+        component={
+          <Container>
+            <Row cols="3">
+              <Col>
+                <Card size="xxl" aspectRatio='threeByFour' backgroundImg={arizona}>
+                  <h3 class="text-lg font-medium text-white">
+                    Headline
+                  </h3>
+                  <p class="mt-2 text-sm opacity-80 text-white">
+                    Doloribus dolores nostrum quia qui natus officia quod et dolorem. Sit repellendus qui ut at blanditiis et quo et molestiae.
+                  </p>
+                </Card> 
+              </Col>
+              <Col>
+                <Card size="xxl" aspectRatio='threeByFour' backgroundImg={lake}>
+                  <h3 class="text-lg font-medium text-white">
+                    Headline
+                  </h3>
+                  <p class="mt-2 text-sm opacity-80 text-white">
+                    Doloribus dolores nostrum quia qui natus officia quod et dolorem. Sit repellendus qui ut at blanditiis et quo et molestiae.
+                  </p>
+                </Card> 
+              </Col>
+              <Col>
+                <Card size="xxl" aspectRatio='threeByFour' backgroundImg={'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2830&q=80&blend=111827&sat=-100&exp=15&blend-mode=multiply'}>
+                  <h3 class="text-lg font-medium text-white">
+                    Headline
+                  </h3>
+                  <p class="mt-2 text-sm opacity-80 text-white">
+                    Doloribus dolores nostrum quia qui natus officia quod et dolorem. Sit repellendus qui ut at blanditiis et quo et molestiae.
+                  </p>
+                </Card> 
+              </Col>
+            </Row>
+          </Container>
+        } 
+        syntaxBlock={
+          `import landscape from '../images/landscape.jpg'; \n` +
+          `  \n` +
+          `<Card size="xxl" aspectRatio='threeByFour' backgroundImg={landscape} \n` +
+          `  <h3 class="text-lg font-medium text-white">Headline</h3  \n` +
+          `  <p class="mt-2 text-sm opacity-80 text-white">Doloribus dolores nostrum...</p \n` +
+          `</Card>`} 
+        title="Cards with Background Images" 
+      />
+
       <span class='prose'>  
         <h2>API</h2>
         <h3>Card</h3>
@@ -158,28 +241,22 @@ function CardsPage() {
                 </thead>
                 <tbody className="divide-y divide-gray-200">
                   <tr>
-                    <td className="px-6 py-2 text-sm font-medium text-gray-900 whitespace-nowrap">dismissable</td>
-                    <td className="px-6 py-2 text-sm text-gray-500 whitespace-nowrap">bool</td>
-                    <td className="px-6 py-2 text-sm text-gray-500 whitespace-nowrap">false</td>
-                    <td className="px-6 py-2 text-sm text-gray-500 whitespace-nowrap">Make alerts dismissable</td>
+                    <td className="px-6 py-2 text-sm font-medium text-gray-900 whitespace-nowrap">aspectRatio</td>
+                    <td className="px-6 py-2 text-sm text-gray-500 whitespace-nowrap">'none'<br/> 'oneByOne'<br/> 'fiveByFour'<br/> 'fourByThree'<br/> 'threeByTwo'<br/> 'fiveByThree'<br/> 'sixteenByNine'<br/> 'threeByOne'</td>
+                    <td className="px-6 py-2 text-sm text-gray-500 whitespace-nowrap">'none'</td>
+                    <td className="px-6 py-2 text-sm text-gray-500 whitespace-nowrap">Sets an aspect ratio</td>
                   </tr>
                   <tr>
-                    <td className="px-6 py-2 text-sm font-medium text-gray-900 whitespace-nowrap">icon</td>
-                    <td className="px-6 py-2 text-sm text-gray-500 whitespace-nowrap">object</td>
-                    <td className="px-6 py-2 text-sm text-gray-500 whitespace-nowrap">null</td>
-                    <td className="px-6 py-2 text-sm text-gray-500 whitespace-nowrap">Sets a primary icon</td>
+                    <td className="px-6 py-2 text-sm font-medium text-gray-900 whitespace-nowrap">backgroundImg</td>
+                    <td className="px-6 py-2 text-sm text-gray-500 whitespace-nowrap">Object</td>
+                    <td className="px-6 py-2 text-sm text-gray-500 whitespace-nowrap">'none'</td>
+                    <td className="px-6 py-2 text-sm text-gray-500 whitespace-nowrap">Sets a background image</td>
                   </tr>
                   <tr>
-                    <td className="px-6 py-2 text-sm font-medium text-gray-900 whitespace-nowrap">text</td>
-                    <td className="px-6 py-2 text-sm text-gray-500 whitespace-nowrap">string</td>
-                    <td className="px-6 py-2 text-sm text-gray-500 whitespace-nowrap">""</td>
-                    <td className="px-6 py-2 text-sm text-gray-500 whitespace-nowrap">Sets alert text</td>
-                  </tr>
-                  <tr>
-                    <td className="px-6 py-2 text-sm font-medium text-gray-900 whitespace-nowrap">subText</td>
-                    <td className="px-6 py-2 text-sm text-gray-500 whitespace-nowrap">string</td>
-                    <td className="px-6 py-2 text-sm text-gray-500 whitespace-nowrap">""</td>
-                    <td className="px-6 py-2 text-sm text-gray-500 whitespace-nowrap">Sets alert sub text</td>
+                    <td className="px-6 py-2 text-sm font-medium text-gray-900 whitespace-nowrap">Size</td>
+                    <td className="px-6 py-2 text-sm text-gray-500 whitespace-nowrap">'xxs' <br/> 'xs' <br/>'sm' <br/> 'md' <br/>'lg' <br/> 'xl' <br/> 'xxl' <br/></td>
+                    <td className="px-6 py-2 text-sm text-gray-500 whitespace-nowrap">'md'</td>
+                    <td className="px-6 py-2 text-sm text-gray-500 whitespace-nowrap">Sets card padding</td>
                   </tr>
                   <tr>
                     <td className="px-6 py-2 text-sm font-medium text-gray-900 whitespace-nowrap">variant</td>

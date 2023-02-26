@@ -50,25 +50,25 @@ function Buttons() {
         class="w-full p-4 text-center m-auto space-x-2"
         component={
           <>
-            <Button variant="outline-primary" text="Primary" />
-            <Button variant="outline-secondary" text="Secondary" />
-            <Button variant="outline-success" text="Success" />
-            <Button variant="outline-warning" text="Warning" />
-            <Button variant="outline-danger" text="Danger" />
-            <Button variant="outline-info" text="Info" />
-            <Button variant="outline-light" text="Light" />
-            <Button variant="outline-dark" text="Dark" />
+            <Button variant="outline_primary" text="Primary" />
+            <Button variant="outline_secondary" text="Secondary" />
+            <Button variant="outline_success" text="Success" />
+            <Button variant="outline_warning" text="Warning" />
+            <Button variant="outline_danger" text="Danger" />
+            <Button variant="outline_info" text="Info" />
+            <Button variant="outline_light" text="Light" />
+            <Button variant="outline_dark" text="Dark" />
           </>
         } 
         syntaxBlock={
-          `<Button variant="outline-primary" text="Primary" /> \n` +
-          `<Button variant="outline-secondary" text="Secondary" /> \n` +
-          `<Button variant="outline-success" text="Success" /> \n` +
-          `<Button variant="outline-warning" text="Warning" /> \n` +
-          `<Button variant="outline-danger" text="Danger" /> \n` +
-          `<Button variant="outline-info" text="Info" /> \n` +
-          `<Button variant="outline-light" text="Light" /> \n` +
-          `<Button variant="outline-dark" text="Dark" />`} 
+          `<Button variant="outline_primary" text="Primary" /> \n` +
+          `<Button variant="outline_secondary" text="Secondary" /> \n` +
+          `<Button variant="outline_success" text="Success" /> \n` +
+          `<Button variant="outline_warning" text="Warning" /> \n` +
+          `<Button variant="outline_danger" text="Danger" /> \n` +
+          `<Button variant="outline_info" text="Info" /> \n` +
+          `<Button variant="outline_light" text="Light" /> \n` +
+          `<Button variant="outline_dark" text="Dark" />`} 
         title="Outline buttons" 
       />
       <span class='prose'>  
@@ -268,13 +268,13 @@ function Buttons() {
       <Showcase 
         class="w-full p-4 text-center m-auto space-x-2" 
         component={
-          <Button variant="outline-light" size="md" icon={<BellIcon/>} iconSize="lg" rounded > 
+          <Button variant="outline_light" size="md" icon={<BellIcon/>} iconSize="lg" rounded > 
             <span class="sr-only">View notifications</span>
             <span class="absolute top-0 right-0 block w-2 h-2 bg-red-400 rounded-full ring-2 ring-white"></span>
           </Button>
         } 
         syntaxBlock={
-          `<Button variant="outline-light" size="md" icon={<BellIcon/>} iconSize="lg" rounded > \n` +
+          `<Button variant="outline_light" size="md" icon={<BellIcon/>} iconSize="lg" rounded > \n` +
           `  <span class="sr-only">View notifications</span> \n` +
           `  <span class="absolute top-0 right-0 block w-2 h-2 bg-red-400 rounded-full ring-2 ring-white"></span> \n` +
           `</Button>`}
@@ -365,7 +365,7 @@ function Buttons() {
                   </tr>
                   <tr>
                     <td className="px-6 py-2 text-sm font-medium text-gray-900 whitespace-nowrap">justify</td>
-                    <td className="px-6 py-2 text-sm text-gray-500 whitespace-nowrap">'left' | 'center' | 'right'</td>
+                    <td className="px-6 py-2 text-sm text-gray-500 whitespace-nowrap">'start' | 'center' | 'end'</td>
                     <td className="px-6 py-2 text-sm text-gray-500 whitespace-nowrap">center</td>
                     <td className="px-6 py-2 text-sm text-gray-500 whitespace-nowrap">Adjust text alignment</td>
                   </tr>
@@ -419,7 +419,7 @@ function Buttons() {
                   </tr>
                   <tr>
                     <td className="px-6 py-2 text-sm font-medium text-gray-900 whitespace-nowrap">variant</td>
-                    <td className="px-6 py-2 text-sm text-gray-500 whitespace-nowrap">'primary' <br/> 'secondary' <br/> 'success' <br/> 'danger' <br/> 'warning' <br/> 'info' <br/> 'light' <br/> 'dark' <br/> 'outline-primary' <br/> 'outline-secondary' <br/> 'outline-success' <br/> 'outline-danger' <br/> 'outline-warning' <br/> 'outline-info' <br/> 'outline-light' <br/> 'outline-dark' </td>
+                    <td className="px-6 py-2 text-sm text-gray-500 whitespace-nowrap">'primary' <br/> 'secondary' <br/> 'success' <br/> 'danger' <br/> 'warning' <br/> 'info' <br/> 'light' <br/> 'dark' <br/> 'outline_primary' <br/> 'outline_secondary' <br/> 'outline_success' <br/> 'outline_danger' <br/> 'outline_warning' <br/> 'outline_info' <br/> 'outline_light' <br/> 'outline_dark' </td>
                     <td className="px-6 py-2 text-sm text-gray-500 whitespace-nowrap">'secondary'</td>
                     <td className="px-6 py-2 text-sm text-gray-500 whitespace-nowrap">Sets button color</td>
                   </tr>

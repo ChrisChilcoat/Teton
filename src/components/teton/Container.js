@@ -1,4 +1,3 @@
-import React from 'react'
 import PropTypes from 'prop-types';
 
 Container.propTypes = {
@@ -10,35 +9,31 @@ Container.defaultProps = {
   max: ''
 }
 
-function Container({ children, max, suffixClasses }) { 
+function Container({ 
+  children, 
+  max, 
+  suffixClasses 
+}) { 
 
-  let _base = 'm-auto px-4'
-  let _max
-
-  switch(max) {
-    case 'sm':
-      _max = 'max-w-screen-sm' // max-width: 640px;
-      break
-    case 'md':
-      _max = 'max-w-screen-md' // max-width: 768px;
-      break
-    case 'lg':
-      _max = 'max-w-screen-lg' //	max-width: 1024px;
-      break
-    case 'xl':
-      _max = 'max-w-screen-xl' //	max-width: 1280px;
-      break
-    case 'xxl':
-      _max = 'max-w-screen-2xl' // max-width: 1536px;
-      break
-    default:
-      break
+  const className = {
+    container: {
+      base: 'm-auto px-4',
+      max: {
+        sm: 'max-w-screen-sm', // max-width: 640px;
+        md: 'max-w-screen-md', // max-width: 768px;
+        lg: 'max-w-screen-lg', //	max-width: 1024px;
+        xl: 'max-w-screen-xl', //	max-width: 1280px;
+        xxl: 'max-w-screen-2xl' // max-width: 1536px;
+      }
+    }
   }
 
-  let final = _base + ' ' + _max + ' ' + suffixClasses
-
   return (
-    <div className={final}>
+    <div className={`
+      ${className.container.base}
+      ${className.container.max[max]}
+      ${suffixClasses}
+    `}>
       {children}
     </div>
   )

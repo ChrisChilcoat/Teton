@@ -1,6 +1,5 @@
 
-import React from "react"
-import { useEffect } from "react";
+import React, { lazy, Suspense, useReducer, useEffect, useState } from 'react';
 import { useLocation } from "react-router-dom";
 import { HashRouter, Route, Routes, Link} from "react-router-dom";
 import Home from "./components/site/Home"
@@ -17,6 +16,7 @@ import CardsPage from "./pages/CardsPage"
 import ComposerPage from "./pages/ComposerPage"
 import PagerPage from "./pages/PagerPage"
 import CarouselPage from "./pages/CarouselPage"
+import ApiDemoPage from "./pages/ApiDemoPage"
 import { default as TetonHeader } from "./components/teton/Header"
 
 function ScrollToTop() {
@@ -134,7 +134,16 @@ export default function App() {
             />
             <ScrollToTop/>
           </>
-        }/>     
+        }/>
+        <Route path="/examples/api" element={ 
+          <>      
+            <DashboardLayout 
+              header={<TetonHeader/>}
+              main={<ApiDemoPage />} 
+            />
+            <ScrollToTop/>
+          </>
+        }/>          
       </Routes>
     </HashRouter>
   )

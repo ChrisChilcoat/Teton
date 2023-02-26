@@ -28,78 +28,78 @@ function Alerts() {
             <Alert 
               variant="primary" 
               icon={<ExclamationIcon/>}
-              text='Primary'
-              subtext={["Something needs your attention. ", <a href="/" className="underline">Check it out!</a>]} 
-            />
+            >
+              <div className="font-bold text-black font-lg dark:text-gray-300">Primary</div>
+              <div className="text-gray-500 font-sm dark:text-gray-400">
+                Something needs your attention. <a href="/" className="underline">Check it out!</a> 
+              </div>
+            </Alert>
             <Alert 
               variant="secondary" 
               icon={<ExclamationIcon/>}
-              text='Secondary'
-              subtext={["Something needs your attention. ", <a href="/" className="underline">Check it out!</a>]}
-            /> 
+            >
+              <div className="font-bold text-black font-lg dark:text-gray-300">Secondary</div>
+              <div className="text-gray-500 font-sm dark:text-gray-400">
+                Something needs your attention. <a href="/" className="underline">Check it out!</a> 
+              </div>
+            </Alert>
             <Alert 
               variant="success" 
               icon={<ExclamationIcon/>}
-              text='Success'
-              subtext={["Something needs your attention. ", <a href="/" className="underline">Check it out!</a>]}
-            />
+            >
+              <div className="font-bold text-black font-lg dark:text-gray-300">Success</div>
+              <div className="text-gray-500 font-sm dark:text-gray-400">
+                Something needs your attention. <a href="/" className="underline">Check it out!</a> 
+              </div>
+            </Alert>
             <Alert 
               variant="warning" 
               icon={<ExclamationIcon/>}
-              text='Warning'
-              subtext={["Something needs your attention. ", <a href="/" className="underline">Check it out!</a>]}
-            />
+            >
+              <div className="font-bold text-black font-lg dark:text-gray-300">Warning</div>
+              <div className="text-gray-500 font-sm dark:text-gray-400">
+                Something needs your attention. <a href="/" className="underline">Check it out!</a> 
+              </div>
+            </Alert>
             <Alert 
               variant="danger" 
               icon={<ExclamationIcon/>}
-              text='Danger'
-              subtext={["Something needs your attention. ", <a href="/" className="underline">Check it out!</a>]}
-            />
+            >
+              <div className="font-bold text-black font-lg dark:text-gray-300">Danger</div>
+              <div className="text-gray-500 font-sm dark:text-gray-400">
+                Something needs your attention. <a href="/" className="underline">Check it out!</a> 
+              </div>
+            </Alert>
             <Alert 
               variant="info" 
               icon={<ExclamationIcon/>}
-              text='Info'
-              subtext={["Something needs your attention. ", <a href="/" className="underline">Check it out!</a>]}
-            />
+            >
+              <div className="font-bold text-black font-lg dark:text-gray-300">Info</div>
+              <div className="text-gray-500 font-sm dark:text-gray-400">
+                Something needs your attention. <a href="/" className="underline">Check it out!</a> 
+              </div>
+            </Alert>
           </>
         } 
         syntaxBlock={
-            `<Alert \n` +
-            `  variant="primary" \n` + 
-            `  icon={<ExclamationIcon/>} \n` +
-            `  text='Primary' \n` +
-            `  subtext={["Something needs your attention. ", <a href="/" className="underline">Check it out!</a>]} \n` +
-            `/> \n` + 
-            `<Alert \n` +
-            `  variant="secondary" \n` + 
-            `  icon={<ExclamationIcon/>} \n` +
-            `  text='Secondary' \n` +
-            `  subtext={["Something needs your attention. ", <a href="/" className="underline">Check it out!</a>]} \n` +
-            `/> \n` + 
-            `<Alert \n` +
-            `  variant="success" \n` + 
-            `  icon={<ExclamationIcon/>} \n` +
-            `  text='Success' \n` +
-            `  subtext={["Something needs your attention. ", <a href="/" className="underline">Check it out!</a>]} \n` +
-            `/> \n` +
-            `<Alert \n` + 
-            `  variant="warning" \n` + 
-            `  icon={<ExclamationIcon/>} \n` +
-            `  text='Warning' \n` +
-            `  subtext={["Something needs your attention. ", <a href="/" className="underline">Check it out!</a>]} \n` +
-            `/> \n` +
-            `<Alert \n` + 
-            `  variant="danger" \n` +
-            `  icon={<ExclamationIcon/>} \n` +
-            `  text='Danger' \n` +
-            `  subtext={["Something needs your attention. ", <a href="/" className="underline">Check it out!</a>]} \n` +
-            `/> \n` +
-            `<Alert \n` +
-            `  variant="info" \n` + 
-            `  icon={<ExclamationIcon/>} \n` +
-            `  text='Info' \n` +
-            `  subtext={["Something needs your attention. ", <a href="/" className="underline">Check it out!</a>]} \n` +
-            `/>`}
+          `<Alert  \n` +
+          `  variant="primary"  \n` +
+          `  icon={<ExclamationIcon/>} \n` +
+          `> \n` +
+          `  <div className="font-bold text-black font-lg dark:text-gray-300">Primary</div> \n` +
+          `  <div className="text-gray-500 font-sm dark:text-gray-400"> \n` +
+          `    Something needs your attention. <a href="/" className="underline">Check it out!</a>  \n` +
+          `  </div> \n` +
+          `</Alert> \n` +
+          `<Alert  \n` +
+          `  variant="secondary"  \n` +
+          `  icon={<ExclamationIcon/>} \n` +
+          `> \n` +
+          `  <div className="font-bold text-black font-lg dark:text-gray-300">Secondary</div> \n` +
+          `  <div className="text-gray-500 font-sm dark:text-gray-400"> \n` +
+          `    Something needs your attention. <a href="/" className="underline">Check it out!</a>  \n` +
+          `  </div> \n` +
+          `</Alert> `}
         title="Alerts" 
       />
       <span class='prose'>  
@@ -114,34 +114,46 @@ function Alerts() {
             <Alert 
               variant="primary" 
               icon={<ExclamationIcon/>}
-              text='Alert'
-              subtext={"This alert is dismissable."}
               dismissable
-            />
+            >
+              <div className="font-bold text-black font-lg dark:text-gray-300">Primary</div>
+              <div className="text-gray-500 font-sm dark:text-gray-400">
+                Something needs your attention. <a href="/" className="underline">Check it out!</a> 
+              </div>
+            </Alert>
             <Alert 
               variant="secondary" 
               icon={<ExclamationIcon/>}
-              text='Alert'
-              subtext={"This alert is dismissable."}
               dismissable
-            />
+            >
+              <div className="font-bold text-black font-lg dark:text-gray-300">Secondary</div>
+              <div className="text-gray-500 font-sm dark:text-gray-400">
+                Something needs your attention. <a href="/" className="underline">Check it out!</a> 
+              </div>
+            </Alert>
           </>
         } 
         syntaxBlock={
-          `<Alert \n` +
-          `  variant="primary" \n` + 
+          `<Alert  \n` +
+          `  variant="primary"  \n` +
           `  icon={<ExclamationIcon/>} \n` +
-          `  text='Primary' \n` +
-          `  subtext={["Something needs your attention. ", <a href="/" className="underline">Check it out!</a>]} \n` +
-          `  dismissable \n` + 
-          `/> \n` + 
-          `<Alert \n` +
-          `  variant="secondary" \n` + 
+          `  dismissable \n` +
+          `> \n` +
+          `  <div className="font-bold text-black font-lg dark:text-gray-300">Primary</div> \n` +
+          `  <div className="text-gray-500 font-sm dark:text-gray-400"> \n` +
+          `    Something needs your attention. <a href="/" className="underline">Check it out!</a>  \n` +
+          `  </div> \n` +
+          `</Alert> \n` +
+          `<Alert  \n` +
+          `  variant="secondary"  \n` +
           `  icon={<ExclamationIcon/>} \n` +
-          `  text='Secondary' \n` +
-          `  subtext={["Something needs your attention. ", <a href="/" className="underline">Check it out!</a>]} \n` +
-          `  dismissable \n` + 
-          `/>`}
+          `  dismissable \n` +
+          `> \n` +
+          `  <div className="font-bold text-black font-lg dark:text-gray-300">Secondary</div> \n` +
+          `  <div className="text-gray-500 font-sm dark:text-gray-400"> \n` +
+          `    Something needs your attention. <a href="/" className="underline">Check it out!</a>  \n` +
+          `  </div> \n` +
+          `</Alert> `}
         title="Dismissable alerts" 
       />
      
@@ -195,18 +207,6 @@ function Alerts() {
                     <td className="px-6 py-2 text-sm text-gray-500 whitespace-nowrap">object</td>
                     <td className="px-6 py-2 text-sm text-gray-500 whitespace-nowrap">null</td>
                     <td className="px-6 py-2 text-sm text-gray-500 whitespace-nowrap">Sets a primary icon</td>
-                  </tr>
-                  <tr>
-                    <td className="px-6 py-2 text-sm font-medium text-gray-900 whitespace-nowrap">text</td>
-                    <td className="px-6 py-2 text-sm text-gray-500 whitespace-nowrap">string</td>
-                    <td className="px-6 py-2 text-sm text-gray-500 whitespace-nowrap">""</td>
-                    <td className="px-6 py-2 text-sm text-gray-500 whitespace-nowrap">Sets alert text</td>
-                  </tr>
-                  <tr>
-                    <td className="px-6 py-2 text-sm font-medium text-gray-900 whitespace-nowrap">subText</td>
-                    <td className="px-6 py-2 text-sm text-gray-500 whitespace-nowrap">string</td>
-                    <td className="px-6 py-2 text-sm text-gray-500 whitespace-nowrap">""</td>
-                    <td className="px-6 py-2 text-sm text-gray-500 whitespace-nowrap">Sets alert sub text</td>
                   </tr>
                   <tr>
                     <td className="px-6 py-2 text-sm font-medium text-gray-900 whitespace-nowrap">variant</td>

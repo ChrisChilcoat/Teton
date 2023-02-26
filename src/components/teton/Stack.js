@@ -4,22 +4,25 @@ import PropTypes from 'prop-types';
 Stack.propTypes = {
   suffixClasses: PropTypes.string,
   stretch: PropTypes.string,
+  spacing: PropTypes.oneOf(['none', 'xs', 'sm', 'md', 'lg', 'xl']),
 }
 
 Stack.defaultProps = {
   suffixClasses: '',
-  stretch: 'all'
+  stretch: 'all',
+  spacing: 'md'
 }
 
-function Stack({ children, stretch, suffixClasses }) { 
+export default function Stack({ children, stretch, spacing, suffixClasses }) { 
   const arrayChildren = Children.toArray(children)
-  let _base = 'md:space-x-4 flex flex-col md:flex-row space-y-4 md:space-y-0'
+  let _base = ' flex flex-col md:flex-row space-y-4 md:space-y-0 w-full'
   let _first = '', 
       _center = '',
       _last = '',
       _middle = '', 
       _ends = '', 
       _all = ''
+  let _spacing = ''
 
   switch(stretch) {
     case 'first':
@@ -48,7 +51,30 @@ function Stack({ children, stretch, suffixClasses }) {
       break
   }
 
-  let final = _base + suffixClasses
+  switch(spacing) {
+    case 'xs':
+      _spacing = ' space-x-0.5'
+      break
+    case 'sm':
+      _spacing = ' space-x-2'
+      break
+    case 'md':
+      _spacing = ' space-x-4'
+      break
+    case 'lg':
+      _spacing = ' space-x-6'
+      break
+    case 'xl':
+      _spacing = ' space-x-8'
+      break
+    case 'none':
+      _spacing = ' space-x-0'
+      break
+    default:
+      break
+  }
+
+  let final = _base + _spacing + suffixClasses
 
   return (
     <div className={final}>
@@ -74,5 +100,3 @@ function Stack({ children, stretch, suffixClasses }) {
     </div>
   )
 }
-
-export default Stack

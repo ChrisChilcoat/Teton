@@ -41,13 +41,13 @@ export default function DashboardLayout({header, sidebar, main, aside }) {
           </Link>
         </div>
         <nav className="flex-1 px-3 mt-5 space-y-1 bg-gray-800">
-          <div class="p-3.5">
+          <div className="p-3.5">
             <h3 className="text-sm font-medium tracking-wide text-gray-500 uppercase">Layouts</h3>                  
             <ul className="mt-5 space-y-6">
               {layouts.map((item) => (
                 <li key={item.name} className="flow-root">
                   <NavLink
-                    exact
+                    exact="true"
                     to={item.href}
                     className={({ isActive }) => (isActive ? 'bg-white' : 'hover:bg-gray-600') + ' flex itemq s-center p-3 -m-3 text-base font-medium text-gray-400 rounded-md'}
                   >
@@ -58,13 +58,13 @@ export default function DashboardLayout({header, sidebar, main, aside }) {
               ))}
             </ul>
           </div>
-          <div class="p-3.5">
+          <div className="p-3.5">
             <h3 className="text-sm font-medium tracking-wide text-gray-500 uppercase">Components</h3>
             <ul className="mt-5 space-y-6">
               {components.map((item) => (
                 <li key={item.name} className="flow-root">
                   <NavLink
-                    exact
+                    exact="true"
                     to={item.href}
                     className={({ isActive }) => (isActive ? 'bg-white' : 'hover:bg-gray-600') + ' flex itemq s-center p-3 -m-3 text-base font-medium text-gray-400 rounded-md'}
                   >
@@ -75,13 +75,13 @@ export default function DashboardLayout({header, sidebar, main, aside }) {
               ))}
             </ul>
           </div>
-          <div class="p-3.5">
+          <div className="p-3.5">
             <h3 className="text-sm font-medium tracking-wide text-gray-500 uppercase">Examples</h3>
             <ul className="mt-5 space-y-6">
               {examples.map((item) => (
                 <li key={item.name} className="flow-root">
                   <NavLink
-                    exact
+                    exact="true"
                     to={item.href}
                     className={({ isActive }) => (isActive ? 'bg-white' : 'hover:bg-gray-600') + ' flex itemq s-center p-3 -m-3 text-base font-medium text-gray-400 rounded-md'}
                   >

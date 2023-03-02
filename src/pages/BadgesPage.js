@@ -15,7 +15,7 @@ import Showcase from '../components/site/Showcase'
 export default function BadgesPage() {
   return (
     <>
-      <span class='prose'>  
+      <span className='prose'>  
         <h1>Badges</h1>
         <p>A simple tools for highlighting content. </p>
         <h2>Examples</h2>
@@ -23,7 +23,7 @@ export default function BadgesPage() {
       </span>
       <br/>
       <Showcase 
-        class="w-full px-4 py-2 text-center m-auto space-y-2"
+        className="w-full px-4 py-2 text-center m-auto space-y-2"
         component={
           <>
             <p className="text-2xl">Headline <Badge>Badge</Badge></p>
@@ -45,13 +45,13 @@ export default function BadgesPage() {
           `</>`} 
         title="Badges" 
       />
-      <span class='prose'>  
+      <span className='prose'>  
         <h2>Variants</h2>
         <p>Change the color of the Badge by using the variant prop.</p>
       </span>
       <br/>
       <Showcase 
-        class="w-full py-4 text-center m-auto space-y-2 space-x-2"
+        className="w-full py-4 text-center m-auto space-y-2 space-x-2"
         component={
           <>
             <Badge variant="primary">Primary</Badge>
@@ -73,13 +73,13 @@ export default function BadgesPage() {
           `</>`} 
         title="Variants" 
       />
-      <span class='prose'>  
+      <span className='prose'>  
         <h2>Size</h2>
         <p>Control the size of the Badge by using the size prop.</p>
       </span>
       <br/>
       <Showcase 
-        class="w-full py-4 text-center m-auto space-y-2 space-x-2"
+        className="w-full py-4 text-center m-auto space-y-2 space-x-2"
         component={
           <>
             <Badge size="xxl">xxl</Badge>
@@ -102,7 +102,7 @@ export default function BadgesPage() {
         title="Variants" 
       />
 
-      <span class='prose'>     
+      <span className='prose'>     
         <h2>API</h2>
         <h3>Badge</h3>
       </span>

@@ -13,13 +13,13 @@ import Showcase from '../components/site/Showcase'
 
 function FormsPage() {
   return (
-    <span class="space-y-6">
-      <span class='prose'>  
+    <span className="space-y-6">
+      <span className='prose'>  
         <h1>Forms</h1>
       </span>
       <Showcase 
         title="Form Control"
-        class="w-full p-4 m-auto space-y-6"
+        className="w-full p-4 m-auto space-y-6"
         component={
           <>
             <FormControl>
@@ -33,7 +33,7 @@ function FormsPage() {
       />
       <Showcase 
         title="Form Control in Error State"
-        class="w-full p-4 m-auto space-y-6"
+        className="w-full p-4 m-auto space-y-6"
         component={
           <>
             <FormControl>
@@ -47,7 +47,7 @@ function FormsPage() {
       />
       <Showcase 
         title="Input" 
-        class="w-full p-4 m-auto space-y-6"
+        className="w-full p-4 m-auto space-y-6"
         component={
           <>
             <Input type="text" placeholder="Invalied input" invalid />

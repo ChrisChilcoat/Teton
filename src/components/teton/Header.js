@@ -57,7 +57,7 @@ function Header({orientation, collapsed}) {
                                     {components.map((item) => (
                                       <li key={item.name} className="flow-root">
                                         <NavLink
-                                          exact
+                                          exact="true"
                                           to={item.href}
                                           className={({ isActive }) => (isActive ? 'bg-white' : 'hover:bg-gray-600') + ' flex itemq s-center p-3 -m-3 text-base font-medium text-gray-400 rounded-md'}
                                         >
@@ -138,7 +138,7 @@ function Header({orientation, collapsed}) {
                 </NavLink>
               </div>
               <nav className="flex-1 px-2 mt-5 space-y-1 bg-gray-800">
-                <div class="p-3.5">
+                <div className="p-3.5">
                   {collapsed
                     ?<h3 className="flex justify-center text-sm font-medium tracking-wide text-gray-600 uppercase jusity-center"><DotsHorizontalIcon className="w-6 h-6"/><span className="sr-only">Resources</span></h3>
                     :<h3 className="text-sm font-medium tracking-wide text-gray-500 uppercase">Layouts</h3>
@@ -147,7 +147,7 @@ function Header({orientation, collapsed}) {
                     {layouts.map((item) => (
                       <li key={item.name} className="flow-root">
                         <NavLink
-                          exact
+                          exact="true"
                           to={item.href}
                           className={({ isActive }) => (isActive ? 'bg-white' : 'hover:bg-gray-600') + ' flex itemq s-center p-3 -m-3 text-base font-medium text-gray-400 rounded-md'}
                         >
@@ -158,7 +158,7 @@ function Header({orientation, collapsed}) {
                     ))}
                   </ul>
                 </div>
-                <div class="p-3.5">
+                <div className="p-3.5">
                   {collapsed
                     ?<h3 className="flex justify-center text-sm font-medium tracking-wide text-gray-600 uppercase jusity-center"><DotsHorizontalIcon className="w-6 h-6"/><span className="sr-only">Resources</span></h3>
                     :<h3 className="text-sm font-medium tracking-wide text-gray-500 uppercase">Components</h3>
@@ -167,7 +167,7 @@ function Header({orientation, collapsed}) {
                     {components.map((item) => (
                       <li key={item.name} className="flow-root">
                         <NavLink
-                          exact
+                          exact="true"
                           to={item.href}
                           className={({ isActive }) => (isActive ? 'bg-white' : 'hover:bg-gray-600') + ' flex itemq s-center p-3 -m-3 text-base font-medium text-gray-400 rounded-md'}
                         >
@@ -178,7 +178,7 @@ function Header({orientation, collapsed}) {
                     ))}
                   </ul>
                 </div>
-                <div class="p-3.5">
+                <div className="p-3.5">
                   {collapsed
                     ?<h3 className="flex justify-center text-sm font-medium tracking-wide text-gray-600 uppercase jusity-center"><DotsHorizontalIcon className="w-6 h-6"/><span className="sr-only">Resources</span></h3>
                     :<h3 className="text-sm font-medium tracking-wide text-gray-500 uppercase">Examples</h3>
@@ -187,7 +187,7 @@ function Header({orientation, collapsed}) {
                     {examples.map((item) => (
                       <li key={item.name} className="flow-root">
                         <NavLink
-                          exact
+                          exact="true"
                           to={item.href}
                           className={({ isActive }) => (isActive ? 'bg-white' : 'hover:bg-gray-600') + ' flex itemq s-center p-3 -m-3 text-base font-medium text-gray-400 rounded-md'}
                         >

@@ -67,31 +67,31 @@ function Pager() {
   }
 
   const LeftBtn = () => (
-    <span class="absolute items-center hidden sm:inline-flex left-5 top-2">
+    <span className="absolute items-center hidden sm:inline-flex left-5 top-2">
       <Button onClick={() => scrollLeft()} icon={<ChevronLeftIcon/>} iconSize="xl" variant="outline_light" size="lg" rounded>
-        <span class="sr-only">Previous</span>
+        <span className="sr-only">Previous</span>
       </Button>
     </span>
   )
   
   const RightBtn = () => (
-    <span class="absolute items-center hidden sm:inline-flex right-5 top-2">
+    <span className="absolute items-center hidden sm:inline-flex right-5 top-2">
       <Button onClick={() => scrollRight()} icon={<ChevronRightIcon/>} iconSize="xl" variant="outline_light" size="lg" rounded>
-        <span class="sr-only">Next</span>
+        <span className="sr-only">Next</span>
       </Button>
     </span>
   )
 
   return (
-    <section aria-label="Start a Video Chat" class="relative max-w-2xl mx-auto">
+    <section aria-label="Start a Video Chat" className="relative max-w-2xl mx-auto">
       <Card size="xxs">
-        <h3 class="sr-only">Start a Video Chat</h3>  
-        <div ref={pager} onScroll={setButtonState} class="w-full overflow-x-auto scrollbar-hide">
-          <div class="whitespace-nowrap pt-2.5 px-4 pb-3 space-x-2.5">
+        <h3 className="sr-only">Start a Video Chat</h3>  
+        <div ref={pager} onScroll={setButtonState} className="w-full overflow-x-auto scrollbar-hide">
+          <div className="whitespace-nowrap pt-2.5 px-4 pb-3 space-x-2.5">
             {people.map((person) => (
               <Button variant="light" size="md" rounded > 
                 <span className="sr-only">{person.name}</span> 
-                <img src={person.imageUrl} aria-hidden="true" alt="touha98" class="object-cover w-full h-full top-0 absolute bottom-0 left-0 right-0 hover:opacity-80 transition duration-300 ease-in-out rounded-full"></img> 
+                <img src={person.imageUrl} aria-hidden="true" alt="touha98" className="object-cover w-full h-full top-0 absolute bottom-0 left-0 right-0 hover:opacity-80 transition duration-300 ease-in-out rounded-full"></img> 
                 <span className="absolute bottom-0 right-0 block h-2.5 w-2.5 rounded-full ring-2 ring-white bg-green-400" />
               </Button>
             ))}

@@ -6,13 +6,13 @@ import Showcase from '../components/site/Showcase'
 function PagerPage() {
   return (
     <span>
-      <span class='prose'>  
+      <span className='prose'>  
         <h1>Pager</h1>
         <p>Use any combination base <strong>Layouts</strong> and <strong>Components</strong> to create your own custom components.</p>
       </span>
       <br/>      
       <Showcase 
-        class="w-full p-4 text-center m-auto space-y-2" // fix this...
+        className="w-full p-4 text-center m-auto space-y-2" // fix this...
         component={
           <>   
             <Pager/>
@@ -90,31 +90,31 @@ function PagerPage() {
           `  } \n` +
           ` \n` +
           `  const LeftBtn = () => ( \n` +
-          `    <span class="absolute items-center hidden sm:inline-flex left-5 top-2"> \n` +
+          `    <span className="absolute items-center hidden sm:inline-flex left-5 top-2"> \n` +
           `      <Button onClick={() => scrollLeft()} icon={<ChevronLeftIcon/>} iconSize="xl" variant="outline-light" size="lg" rounded> \n` +
-          `        <span class="sr-only">Previous</span> \n` +
+          `        <span className="sr-only">Previous</span> \n` +
           `      </Button> \n` +
           `    </span> \n` +
           `  ) \n` +
           ` \n` +
           `  const RightBtn = () => ( \n` +
-          `    <span class="absolute items-center hidden sm:inline-flex right-5 top-2"> \n` +
+          `    <span className="absolute items-center hidden sm:inline-flex right-5 top-2"> \n` +
           `      <Button onClick={() => scrollRight()} icon={<ChevronRightIcon/>} iconSize="xl" variant="outline-light" size="lg" rounded> \n` +
-          `        <span class="sr-only">Next</span> \n` +
+          `        <span className="sr-only">Next</span> \n` +
           `      </Button> \n` +
           `    </span> \n` +
           `  ) \n` +
           ` \n` +
           `  return ( \n` +
-          `    <section aria-label="Start a Video Chat" class="relative max-w-2xl mx-auto"> \n` +
+          `    <section aria-label="Start a Video Chat" className="relative max-w-2xl mx-auto"> \n` +
           `      <Card size="xxs"> \n` +
-          `        <h3 class="sr-only">Start a Video Chat</h3> \n` +  
-          `        <div ref={pager} onScroll={setButtonState} class="w-full overflow-x-auto scrollbar-hide"> \n` +
-          `          <div class="whitespace-nowrap pt-2.5 px-4 pb-3 space-x-2.5"> \n` +
+          `        <h3 className="sr-only">Start a Video Chat</h3> \n` +  
+          `        <div ref={pager} onScroll={setButtonState} className="w-full overflow-x-auto scrollbar-hide"> \n` +
+          `          <div className="whitespace-nowrap pt-2.5 px-4 pb-3 space-x-2.5"> \n` +
           `            {people.map((person) => ( \n` +
           `              <Button variant="dark" size="md" rounded> \n` + 
           `                <span className="sr-only">{person.name}</span> \n` + 
-          `                <img src={person.imageUrl} aria-hidden="true" alt="touha98" class="object-cover w-full h-full top-0 absolute bottom-0 left-0 right-0 hover:opacity-80 transition duration-300 ease-in-out rounded-full"></img>  \n` +
+          `                <img src={person.imageUrl} aria-hidden="true" alt="touha98" className="object-cover w-full h-full top-0 absolute bottom-0 left-0 right-0 hover:opacity-80 transition duration-300 ease-in-out rounded-full"></img>  \n` +
           `                <span className="absolute bottom-0 right-0 block h-2.5 w-2.5 rounded-full ring-2 ring-white bg-green-400" /> \n` +
           `              </Button> \n` +
           `            ))} \n` +

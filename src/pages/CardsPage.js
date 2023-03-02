@@ -12,7 +12,7 @@ function CardsPage() {
 
   return (
     <span>
-      <span class='prose'>  
+      <span className='prose'>  
         <h1>Cards</h1>
         <p>Custom cards to quickly highlight important information.</p>
         <h2>Examples</h2>
@@ -20,62 +20,62 @@ function CardsPage() {
       </span>
       <br/>      
       <Showcase 
-        class="w-full p-4 m-auto space-y-2" // fix this...
+        className="w-full p-4 m-auto space-y-2" // fix this...
         component={
           <>   
             <Card>
-              <h3 class="text-lg font-medium">
+              <h3 className="text-lg font-medium">
                 Default
               </h3>
-              <p class="mt-2 text-sm opacity-80">
+              <p className="mt-2 text-sm opacity-80">
                 Doloribus dolores nostrum quia qui natus officia quod et dolorem. Sit repellendus qui ut at blanditiis et quo et molestiae.
               </p>
             </Card>    
             <Card variant="primary">
-              <h3 class="text-lg font-medium">
+              <h3 className="text-lg font-medium">
                 Primary
               </h3>
-              <p class="mt-2 text-sm opacity-80">
+              <p className="mt-2 text-sm opacity-80">
                 Doloribus dolores nostrum quia qui natus officia quod et dolorem. Sit repellendus qui ut at blanditiis et quo et molestiae.
               </p>
             </Card>
             <Card variant="secondary">
-              <h3 class="text-lg font-medium">
+              <h3 className="text-lg font-medium">
                 Secondary
               </h3>
-              <p class="mt-2 text-sm opacity-80">
+              <p className="mt-2 text-sm opacity-80">
                 Doloribus dolores nostrum quia qui natus officia quod et dolorem. Sit repellendus qui ut at blanditiis et quo et molestiae.
               </p>
             </Card> 
             <Card variant="success">
-              <h3 class="text-lg font-medium">
+              <h3 className="text-lg font-medium">
                 Success
               </h3>
-              <p class="mt-2 text-sm opacity-80">
+              <p className="mt-2 text-sm opacity-80">
                 Doloribus dolores nostrum quia qui natus officia quod et dolorem. Sit repellendus qui ut at blanditiis et quo et molestiae.
               </p>
             </Card>
             <Card variant="warning">
-              <h3 class="text-lg font-medium">
+              <h3 className="text-lg font-medium">
                 Warning
               </h3>
-              <p class="mt-2 text-sm opacity-80">
+              <p className="mt-2 text-sm opacity-80">
                 Doloribus dolores nostrum quia qui natus officia quod et dolorem. Sit repellendus qui ut at blanditiis et quo et molestiae.
               </p>
             </Card>
             <Card variant="danger">
-              <h3 class="text-lg font-medium">
+              <h3 className="text-lg font-medium">
                 Danger
               </h3>
-              <p class="mt-2 text-sm opacity-80">
+              <p className="mt-2 text-sm opacity-80">
                 Doloribus dolores nostrum quia qui natus officia quod et dolorem. Sit repellendus qui ut at blanditiis et quo et molestiae.
               </p>
             </Card>
             <Card variant="info">
-              <h3 class="text-lg font-medium">
+              <h3 className="text-lg font-medium">
                 Info
               </h3>
-              <p class="mt-2 text-sm opacity-80">
+              <p className="mt-2 text-sm opacity-80">
                 Doloribus dolores nostrum quia qui natus officia quod et dolorem. Sit repellendus qui ut at blanditiis et quo et molestiae.
               </p>
             </Card>
@@ -83,51 +83,51 @@ function CardsPage() {
         } 
         syntaxBlock={
           `<Card> \n` +
-          `  <h3 class="text-lg font-medium">Default</h3> \n` +
-          `  <p class="mt-2 text-sm opacity-80">Doloribus dolores nostrum...</p> \n` +
+          `  <h3 className="text-lg font-medium">Default</h3> \n` +
+          `  <p className="mt-2 text-sm opacity-80">Doloribus dolores nostrum...</p> \n` +
           `</Card>  \n` +   
           `<Card variant="primary"> \n` +
-          `  <h3 class="text-lg font-medium">Primary</h3> \n` +
-          `  <p class="mt-2 text-sm opacity-80">Doloribus dolores nostrum...</p> \n` +
+          `  <h3 className="text-lg font-medium">Primary</h3> \n` +
+          `  <p className="mt-2 text-sm opacity-80">Doloribus dolores nostrum...</p> \n` +
           `</Card>`}
         title="Cards" 
       />
-      <span class='prose'>  
+      <span className='prose'>  
         <h2>Aspect Ratios</h2>
         <p>Quickly change the default aspect ratio of your card by using the AspectRatio option.</p>
       </span>
       <br/>      
       <Showcase 
-        class="w-full py-4 m-auto space-y-2" // fix this...
+        className="w-full py-4 m-auto space-y-2" // fix this...
         component={
           <Container>
             <Row cols="3">
               <Col>
                 <Card size="xxl" aspectRatio='OneByFour'>
-                  <h3 class="text-lg font-medium">
+                  <h3 className="text-lg font-medium">
                     One By Four
                   </h3>
-                  <p class="mt-2 text-sm opacity-80">
+                  <p className="mt-2 text-sm opacity-80">
                     Doloribus dolores nostrum quia qui natus officia quod et dolorem. Sit repellendus qui ut at blanditiis et quo et molestiae.
                   </p>
                 </Card> 
               </Col>
               <Col>
                 <Card size="xxl" aspectRatio='oneByOne'>
-                  <h3 class="text-lg font-medium">
+                  <h3 className="text-lg font-medium">
                     One By One
                   </h3>
-                  <p class="mt-2 text-sm opacity-80">
+                  <p className="mt-2 text-sm opacity-80">
                     Doloribus dolores nostrum quia qui natus officia quod et dolorem. Sit repellendus qui ut at blanditiis et quo et molestiae.
                   </p>
                 </Card> 
               </Col>
               <Col>
                 <Card size="xxl" aspectRatio='threeByFour'>
-                  <h3 class="text-lg font-medium">
+                  <h3 className="text-lg font-medium">
                     Three By Four
                   </h3>
-                  <p class="mt-2 text-sm opacity-80">
+                  <p className="mt-2 text-sm opacity-80">
                     Doloribus dolores nostrum quia qui natus officia quod et dolorem. Sit repellendus qui ut at blanditiis et quo et molestiae.
                   </p>
                 </Card> 
@@ -149,42 +149,42 @@ function CardsPage() {
         title="Cards with Aspect Ratios" 
       />
 
-<span class='prose'>  
+<span className='prose'>  
         <h2>Background Images</h2>
         <p>Pass a background image to a card using the backgroundImg option.</p>
       </span>
       <br/>      
       <Showcase 
-        class="w-full py-4 m-auto space-y-2" // fix this...
+        className="w-full py-4 m-auto space-y-2" // fix this...
         component={
           <Container>
             <Row cols="3">
               <Col>
                 <Card size="xxl" aspectRatio='threeByFour' backgroundImg={arizona}>
-                  <h3 class="text-lg font-medium text-white">
+                  <h3 className="text-lg font-medium text-white">
                     Headline
                   </h3>
-                  <p class="mt-2 text-sm opacity-80 text-white">
+                  <p className="mt-2 text-sm opacity-80 text-white">
                     Doloribus dolores nostrum quia qui natus officia quod et dolorem. Sit repellendus qui ut at blanditiis et quo et molestiae.
                   </p>
                 </Card> 
               </Col>
               <Col>
                 <Card size="xxl" aspectRatio='threeByFour' backgroundImg={lake}>
-                  <h3 class="text-lg font-medium text-white">
+                  <h3 className="text-lg font-medium text-white">
                     Headline
                   </h3>
-                  <p class="mt-2 text-sm opacity-80 text-white">
+                  <p className="mt-2 text-sm opacity-80 text-white">
                     Doloribus dolores nostrum quia qui natus officia quod et dolorem. Sit repellendus qui ut at blanditiis et quo et molestiae.
                   </p>
                 </Card> 
               </Col>
               <Col>
                 <Card size="xxl" aspectRatio='threeByFour' backgroundImg={'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2830&q=80&blend=111827&sat=-100&exp=15&blend-mode=multiply'}>
-                  <h3 class="text-lg font-medium text-white">
+                  <h3 className="text-lg font-medium text-white">
                     Headline
                   </h3>
-                  <p class="mt-2 text-sm opacity-80 text-white">
+                  <p className="mt-2 text-sm opacity-80 text-white">
                     Doloribus dolores nostrum quia qui natus officia quod et dolorem. Sit repellendus qui ut at blanditiis et quo et molestiae.
                   </p>
                 </Card> 
@@ -196,13 +196,13 @@ function CardsPage() {
           `import landscape from '../images/landscape.jpg'; \n` +
           `  \n` +
           `<Card size="xxl" aspectRatio='threeByFour' backgroundImg={landscape} \n` +
-          `  <h3 class="text-lg font-medium text-white">Headline</h3  \n` +
-          `  <p class="mt-2 text-sm opacity-80 text-white">Doloribus dolores nostrum...</p \n` +
+          `  <h3 className="text-lg font-medium text-white">Headline</h3  \n` +
+          `  <p className="mt-2 text-sm opacity-80 text-white">Doloribus dolores nostrum...</p \n` +
           `</Card>`} 
         title="Cards with Background Images" 
       />
 
-      <span class='prose'>  
+      <span className='prose'>  
         <h2>API</h2>
         <h3>Card</h3>
       </span>

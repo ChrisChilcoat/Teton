@@ -29,7 +29,7 @@ function CarouselPage() {
 
   return (
     <span>
-      <span class='prose'>  
+      <span className='prose'>  
         <h1>Carousel</h1>
         <p>Custom carousel component to quiclkly page through images.</p>
         <h2>Example</h2>
@@ -37,7 +37,7 @@ function CarouselPage() {
       </span>
       <br/>      
       <Showcase 
-        class="w-full m-auto space-y-2"
+        className="w-full m-auto space-y-2"
         component={
           <>  
             <Carousel slides={images} position={startPos} indicatorVariant='pill' />
@@ -54,7 +54,7 @@ function CarouselPage() {
         }
         title="Carousel" 
       />
-      <span class='prose'>  
+      <span className='prose'>  
         <h2>API</h2>
         <h3>Carousel</h3>
       </span>

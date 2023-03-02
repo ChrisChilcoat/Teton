@@ -1,4 +1,4 @@
-import React, {useEffect, useState, createRef} from 'react'
+import React, {useEffect, useState, createRef, reduce} from 'react'
 import axios from "axios";
 import TtDialog from "../Dialog";
 import Stack from '../Stack';
@@ -7,10 +7,11 @@ import ButtonGroup from '../ButtonGroup';
 import Carousel from '../Carousel';
 import { XIcon, HeartIcon, ShareIcon } from '@heroicons/react/outline';
 
-const baseURL = "https://jsonplaceholder.typicode.com/photos";
+const restURL = "https://jsonplaceholder.typicode.com/photos";
 
 export default function ApiDemo() {
-  const [data, setData] = useState(null);
+  const [data, setData] = useState([]);
+  const [thumbRefs, setThumbRefs] = useState([]);
   const [dataRangeLow, setDataRangeLow ] = useState(0);
   const [dataRangeHigh, setDataRangeHigh ] = useState(10);
   const [error, setError] = useState(null);
@@ -21,7 +22,7 @@ export default function ApiDemo() {
   
   useEffect(() => {    
     axios
-      .get(baseURL)
+      .get(restURL)
       .then((response) => {
         setTimeout(() => {
           setData(response.data);
@@ -32,43 +33,46 @@ export default function ApiDemo() {
       });     
   }, []);
 
-  const handleLoadPrevtImages = () => {
-    setDataRangeLow(dataRangeLow - 3)
-    setDataRangeHigh(dataRangeHigh - 3)
-  }
-  const handleLoadNextImages = () => {
-    setDataRangeLow(dataRangeLow + 3)
-    setDataRangeHigh(dataRangeHigh + 3)
+
+  const handleCloseDialog = () => setIsOpen(false);
+  const handleOpenDialog = () => setIsOpen(true);
+  const handleAppendThumbnails = () => setDataRangeHigh(dataRangeHigh + 10);
+  const handleCenterThumbnail = postId => {
+    const scrollTop = sidebar.current.scrollTop;
+    const clientHeight = sidebar.current.clientHeight;
+    const scrollHeight = sidebar.current.scrollHeight;
+    
+    console.log(postId)
+
   }
 
   const handleThumbnailVisibility = () => {
-    const currentScrollTop = sidebar.current.scrollTop;
+    const scrollTop = sidebar.current.scrollTop;
+    const clientHeight = sidebar.current.clientHeight;
+    const scrollHeight = sidebar.current.scrollHeight;
 
-    console.log(currentScrollTop);
+    //console.log(scrollTop);
+    //console.log(clientHeight);
+    //console.log(scrollHeight - clientHeight);
 
-    {/*
-    const totalWidth = pager.current.scrollWidth - pager.current.clientWidth;
+    scrollTop == (scrollHeight - clientHeight) && handleAppendThumbnails()
 
-    currentScrollLeft > 0 ? setShowLeftBtn(true) : setShowLeftBtn(false);
-    totalWidth === currentScrollLeft ? setShowRightBtn(false) : setShowRightBtn(true);
-    */}
-  }
-
-  const handleCloseDialog = () => {
-    setIsOpen(false)
-  }
-
-  const handleOpenDialog = () => {
-    setIsOpen(true)
   }
 
   const handleSetCarouselPos = e => {
-    e.stopPropagation();
     const posId = e.target.dataset.pos ? parseInt(e.target.dataset.pos) : 0
-    console.log(posId)
     setCarouselPos(posId)
+    handleCenterThumbnail(posId)
+
+    console.log(thumbRefs[posId])
+
+    e.stopPropagation();
   } 
+
   
+
+
+
   if (error) return `Error: ${error.message}`;
 
   return (
@@ -92,7 +96,7 @@ export default function ApiDemo() {
                 </div>
                 <div>
                   <Button size="sm" onClick={handleCloseDialog} variant="outline_light" rounded icon={<XIcon/>} suffixClasses="ml-2">
-                    <span class="sr-only">Close Dialog</span> 
+                    <span className="sr-only">Close Dialog</span> 
                   </Button>
                 </div> 
               </Stack> 
@@ -101,37 +105,22 @@ export default function ApiDemo() {
                 <Stack stretch="last"> 
                   <div className='w-[300px] relative'>
                     <div ref={sidebar} onScroll={handleThumbnailVisibility} className="overflow-y-scroll h-full relative border-r pr-4 pb-10">
-                    <button
-                        type="button"
-                        onClick={handleLoadPrevtImages}
-                        className="rounded-md bg-black bg-opacity-20 px-4 py-2 text-sm font-medium text-white hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
-                      >
-                        Load 10 Prev Images
-                      </button> 
                       {data.slice(dataRangeLow, dataRangeHigh).map((item, index) => (
-                        <div className={(index % 3 ? "w-1/2 aspect-square p-1" : "w-full aspect-video p-1") + 
-                        " inline-block"}>
-                        <button
-                          key={index + item.imageUrl}
-                          type="button"
-                          className={ 
-                            (carouselPos === item.id - 1 ? " border-collapse border-red-500 border-4" : "bg-black ") + 
-                            " w-full h-full rounded-md bg-opacity-20 relative overflow-hidden px-4 hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"}
-                        ><img 
-                          src={item.thumbnailUrl} 
-                          data-pos={item.id - 1} 
-                          onClick={handleSetCarouselPos} 
-                          className='object-cover w-full h-full top-0 absolute bottom-0 left-0 right-0 hover:opacity-80 transition duration-300 ease-in-out' />
-                        </button>
+                        <div key={index} className={(index % 3 ? "w-1/2 aspect-square p-1" : "w-full aspect-video p-1") + " inline-block"}>
+                          <button
+                            key={index + item.imageUrl}
+                            type="button"
+                            className={ 
+                              (carouselPos === item.id - 1 ? " border-collapse border-red-500 border-4" : "bg-black ") + 
+                              " w-full h-full rounded-md bg-opacity-20 relative overflow-hidden px-4 hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"}
+                          ><img 
+                            src={item.thumbnailUrl} 
+                            data-pos={item.id - 1} 
+                            onClick={handleSetCarouselPos}
+                            className='object-cover w-full h-full top-0 absolute bottom-0 left-0 right-0 hover:opacity-80 transition duration-300 ease-in-out' />
+                          </button>
                         </div>
                       ))}   
-                      <button
-                        type="button"
-                        onClick={handleLoadNextImages}
-                        className="rounded-md bg-black bg-opacity-20 px-4 py-2 text-sm font-medium text-white hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
-                      >
-                        Load 10 Next Images
-                      </button>      
                     </div>
                   </div> 
                   <div className="m-auto relative">

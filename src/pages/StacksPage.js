@@ -14,7 +14,7 @@ import Showcase from '../components/site/Showcase'
 function StacksPage() {
   return (
     <>
-      <span class='prose'>  
+      <span className='prose'>  
         <h1>Stacks</h1>
         <p>Stacks are simple flex box utilities, designed to make creating components layouts easy.</p>
         <h2>Examples</h2>
@@ -22,7 +22,7 @@ function StacksPage() {
       </span>
       <br/>
       <Showcase 
-        class="w-full p-4 text-center m-auto space-y-4"
+        className="w-full p-4 text-center m-auto space-y-4"
         component={
           <>
             <Stack>
@@ -68,13 +68,13 @@ function StacksPage() {
           `</>`} 
         title="Stacks" 
       />
-      <span class='prose'>  
+      <span className='prose'>  
         <h2>Stretch</h2>
         <p>Use the stretch prop to make any of the divs span the remaning width of the stack.</p>
       </span>
       <br/>
       <Showcase 
-        class="w-full p-4 text-center m-auto space-y-4"
+        className="w-full p-4 text-center m-auto space-y-4"
         component={
           <>
             <Stack stretch="center">
@@ -179,7 +179,7 @@ function StacksPage() {
         title="Stretch" 
       />
 
-      <span class='prose'>  
+      <span className='prose'>  
         <h2>API</h2>
         <h3>Stack</h3>
       </span>

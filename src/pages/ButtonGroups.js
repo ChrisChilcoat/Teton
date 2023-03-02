@@ -12,7 +12,7 @@ import Showcase from '../components/site/Showcase'
 function ButtonGroups() {
   return (
     <span>
-      <span class='prose'>  
+      <span className='prose'>  
         <h1>Button Groups </h1>
         <p>Button Groups work in combination with the Button component. Just wrap your Buttons in a Button Group component and voilà!</p>
         <h2>Examples</h2>
@@ -20,7 +20,7 @@ function ButtonGroups() {
       </span>
       <br/>
       <Showcase 
-        class="w-full p-4 text-center m-auto space-y-2"
+        className="w-full p-4 text-center m-auto space-y-2"
         component={
           <>
             <ButtonGroup variant="primary">
@@ -95,13 +95,13 @@ function ButtonGroups() {
         }
         title="Button groups" 
       />
-      <span class='prose'>  
+      <span className='prose'>  
         <h2>Outline</h2>
         <p>For a lighter touch, button groups also come in outline-* variants with no background color.</p>
       </span>
       <br/>
       <Showcase 
-        class="w-full p-4 text-center m-auto space-y-2"
+        className="w-full p-4 text-center m-auto space-y-2"
         component={
           <>
             <ButtonGroup
@@ -200,13 +200,13 @@ function ButtonGroups() {
         }
         title="Outline groups" 
       />
-      <span class='prose'>  
+      <span className='prose'>  
         <h2>Rounded</h2>
         <p>Round button group corners by adding the rounded prop</p>
       </span>
       <br/>
       <Showcase 
-        class="w-full p-4 text-center m-auto space-y-2" 
+        className="w-full p-4 text-center m-auto space-y-2" 
         component={
           <>
             <ButtonGroup
@@ -239,14 +239,14 @@ function ButtonGroups() {
         } 
         title="Rounded groups" 
       />
-      <span class='prose'>  
+      <span className='prose'>  
         <h2>Sizes</h2>
         <p>Fancy larger or smaller button groups?<br/>
         Add size="xs", size="sm", size="lg" size="xl" for additional sizes.</p>
       </span>
       <br/>
       <Showcase 
-        class="w-full p-4 text-center m-auto space-y-2 space-x-2 align-middle" 
+        className="w-full p-4 text-center m-auto space-y-2 space-x-2 align-middle" 
         component={
           <>
             <ButtonGroup variant="primary" size="xl">
@@ -296,7 +296,7 @@ function ButtonGroups() {
           '</>'}
         title="Group sizes" 
       />
-      <span class='prose'>  
+      <span className='prose'>  
         <h2>API</h2>
         <h3>Button</h3>
       </span>

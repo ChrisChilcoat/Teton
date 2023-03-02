@@ -14,7 +14,7 @@ import Showcase from '../components/site/Showcase'
 function Alerts() {
   return (
     <span>
-      <span class='prose'>  
+      <span className='prose'>  
         <h1>Alerts </h1>
         <p>Custom alerts to quickly grab the users attention.</p>
         <h2>Examples</h2>
@@ -22,7 +22,7 @@ function Alerts() {
       </span>
       <br/>      
       <Showcase 
-        class="w-full p-4 text-center m-auto space-y-2" // fix this...
+        className="w-full p-4 text-center m-auto space-y-2" // fix this...
         component={
           <>   
             <Alert 
@@ -102,13 +102,13 @@ function Alerts() {
           `</Alert> `}
         title="Alerts" 
       />
-      <span class='prose'>  
+      <span className='prose'>  
         <h2>Dismissable</h2>
         <p>Make your alerts dismissable by adding the dismissable prop.</p>
       </span>
       <br/>
       <Showcase 
-        class="w-full p-4 text-center m-auto space-y-2" // fix this...
+        className="w-full p-4 text-center m-auto space-y-2" // fix this...
         component={
           <>   
             <Alert 
@@ -157,7 +157,7 @@ function Alerts() {
         title="Dismissable alerts" 
       />
      
-      <span class='prose'>  
+      <span className='prose'>  
         <h2>API</h2>
         <h3>Alert</h3>
       </span>

@@ -93,7 +93,7 @@ export default function Carousel({
   RenderIndicators = ( ) => {  
     return (
       <span>
-        <div class={(btnSize === 'xs' ? 'space-x-2' : 'space-x-3') + ' absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2'}>
+        <div className={(btnSize === 'xs' ? 'space-x-2' : 'space-x-3') + ' absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2'}>
           {/*
           {slides.slice(0, 10).map((item, index) => (
             <button 
@@ -114,7 +114,7 @@ export default function Carousel({
   },
   RenderSlides = ( ) => { 
     return slides.slice(min, max).map((item, index) => (
-      <div class={        
+      <div key={index} className={        
         (pos > index ? 'opacity-0 z-10 transition-all' : '') + // Left
         (pos === index ? 'opacity-100 z-20 transition-all' : '') + // Active
         (pos < index ? 'opacity-0 z-10 transition-all' : '') + // Right
@@ -123,7 +123,7 @@ export default function Carousel({
         <img 
           src={item.url} 
           alt={item.imageDesc} 
-          class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+          className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
         />
         <span className="sr-only">{item.imageDesc}</span>
       </div>
@@ -132,14 +132,14 @@ export default function Carousel({
   RenderButtons = () => {
     return (
       <>
-        <div class={(pos === 0 ? 'hidden' : 'absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4')}>
+        <div className={(pos === 0 ? 'hidden' : 'absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4')}>
           <Button onClick={() => handleSlideLeft()} icon={<ChevronLeftIcon/>} iconSize="xl" variant="outline_light" size={btnSize} rounded> 
-            <span class="sr-only">Previous</span> 
+            <span className="sr-only">Previous</span> 
           </Button>      
         </div>
-        <div class={(pos === length - 1 ? 'hidden' : 'absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4')}>
+        <div className={(pos === length - 1 ? 'hidden' : 'absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4')}>
           <Button onClick={() => handleSlideRight()} icon={<ChevronRightIcon/>} iconSize="xl" variant="outline_light" size={btnSize} rounded> 
-            <span class="sr-only">Next</span> 
+            <span className="sr-only">Next</span> 
           </Button> 
         </div> 
       </>
@@ -147,8 +147,8 @@ export default function Carousel({
   };
   
   return (
-    <div class="w-full m-auto relative">
-      <div class={`
+    <div className="w-full m-auto relative">
+      <div className={`
         ${className.carousel.base}
         ${className.carousel.aspectRatio[aspectRatio]}
       `}>

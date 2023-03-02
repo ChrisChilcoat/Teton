@@ -15,7 +15,7 @@ import Showcase from '../components/site/Showcase'
 function GridsPage() {
   return (
     <span>
-      <span class='prose'>  
+      <span className='prose'>  
         <h1>Grid</h1>
         <p>The grid system is a fully responsive layout created using a combination of the Container, Column, and Row components. </p>
         <h2>Container</h2>
@@ -23,7 +23,7 @@ function GridsPage() {
       </span>
       <br/>
       <Showcase 
-        class="w-full py-4 text-center m-auto space-x-2"
+        className="w-full py-4 text-center m-auto space-x-2"
         component={
           <>
             <Container>
@@ -45,13 +45,13 @@ function GridsPage() {
           `</>`} 
         title="Container" 
       />
-      <span class='prose'>  
+      <span className='prose'>  
         <h2>Max Width</h2>
         <p>Add max="sm", max="md", max="lg" max="xl" max="xxl" for additional sizes.</p>
       </span>
       <br/>
       <Showcase 
-        class="w-full py-4 text-center m-auto space-y-2"
+        className="w-full py-4 text-center m-auto space-y-2"
         component={
           <>
             <Container max="sm">
@@ -121,7 +121,7 @@ function GridsPage() {
           `</>`} 
         title="Container max width" 
       />
-      <span class='prose'>  
+      <span className='prose'>  
         <h2>Rows</h2>
         <p>Control the number of <Badge variant="info">Columns</Badge> in a <Badge variant="info">Row</Badge> by using the <Badge variant="info">Cols</Badge> prop.</p>
         <p>
@@ -141,7 +141,7 @@ function GridsPage() {
       </span>
       <br/>
       <Showcase 
-        class="w-full py-4 text-center space-y-4 m-auto"
+        className="w-full py-4 text-center space-y-4 m-auto"
         component={
           <>
             <Container>
@@ -219,13 +219,13 @@ function GridsPage() {
           `</>`} 
         title="Rows" 
       />
-      <span class='prose'>  
+      <span className='prose'>  
         <h2>Columns</h2>
         <p>Control each columns span at diffrent break points by adding xs="*", sm="*", md="*", lg="*", xl="*", xxl="*".</p>
       </span>
       <br/>
       <Showcase 
-        class="w-full py-4 text-center m-auto space-y-2 align-middle" 
+        className="w-full py-4 text-center m-auto space-y-2 align-middle" 
         component={
           <>
             <Container>
@@ -253,7 +253,7 @@ function GridsPage() {
       />
 
 
-      <span class='prose'>  
+      <span className='prose'>  
         <h2>API</h2>
         <h3>Container</h3>
       </span>
@@ -310,7 +310,7 @@ function GridsPage() {
         </div>
       </div>
 
-      <span class='prose'>  
+      <span className='prose'>  
         <h3>Row</h3>
       </span>
       <div className="flex flex-col my-8">
@@ -366,7 +366,7 @@ function GridsPage() {
         </div>
       </div>
 
-      <span class='prose'>  
+      <span className='prose'>  
         <h3>Col</h3>
       </span>
       <div className="flex flex-col my-8">

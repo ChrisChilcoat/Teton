@@ -9,7 +9,7 @@ import Showcase from '../components/site/Showcase'
 function Buttons() {
   return (
     <span>
-      <span class='prose'>  
+      <span className='prose'>  
         <h1>Buttons</h1>
         <p>Custom button styles for actions in forms, dialogs, and more with support for multiple sizes, states, and more.</p>
         <h2>Examples</h2>
@@ -17,7 +17,7 @@ function Buttons() {
       </span>
       <br/>
       <Showcase 
-        class="w-full p-4 text-center m-auto space-x-2"
+        className="w-full p-4 text-center m-auto space-x-2"
         component={
           <>
             <Button variant="primary" text="Primary" />
@@ -41,13 +41,13 @@ function Buttons() {
           `<Button variant="dark" text="Dark" />`} 
         title="Buttons" 
       />
-      <span class='prose'>  
+      <span className='prose'>  
         <h2>Outline</h2>
         <p>For a lighter touch, Buttons also come in outline-* variants with no background color.</p>
       </span>
       <br/>
       <Showcase 
-        class="w-full p-4 text-center m-auto space-x-2"
+        className="w-full p-4 text-center m-auto space-x-2"
         component={
           <>
             <Button variant="outline_primary" text="Primary" />
@@ -71,13 +71,13 @@ function Buttons() {
           `<Button variant="outline_dark" text="Dark" />`} 
         title="Outline buttons" 
       />
-      <span class='prose'>  
+      <span className='prose'>  
         <h2>Rounded</h2>
         <p>Round button corners by adding the rounded prop</p>
       </span>
       <br/>
       <Showcase 
-        class="w-full p-4 text-center m-auto space-x-2" 
+        className="w-full p-4 text-center m-auto space-x-2" 
         component={
           <>
             <Button variant="primary" text="Rounded Button" rounded />
@@ -89,14 +89,14 @@ function Buttons() {
           `<Button variant="secondary" text="Rounded Button" rounded />`}
         title="Rounded buttons" 
       />
-      <span class='prose'>  
+      <span className='prose'>  
         <h2>Sizes</h2>
         <p>Fancy larger or smaller buttons?<br/>
         Add size="xs", size="sm", size="lg" size="xl" for additional sizes.</p>
       </span>
       <br/>
       <Showcase 
-        class="w-full p-4 text-center m-auto space-y-2 space-x-2 align-middle" 
+        className="w-full p-4 text-center m-auto space-y-2 space-x-2 align-middle" 
         component={
           <>
             <Button variant="primary" size="xl" text="XL Button" />
@@ -112,13 +112,13 @@ function Buttons() {
           `<Button variant="primary" size="xs" text="XS Button" />`} 
         title="Button Sizes" 
       />
-      <span class='prose'>  
+      <span className='prose'>  
         <h2>Block buttons</h2>
         <p>Create full-width, “block buttons” by adding the block prop.</p>
       </span>
       <br/>
       <Showcase 
-        class="w-full p-4 text-center m-auto space-y-2" 
+        className="w-full p-4 text-center m-auto space-y-2" 
         component={
           <>
             <Button variant="primary" text="Block Button" block />
@@ -130,13 +130,13 @@ function Buttons() {
           `<Button variant="secondary" text="Block Button" block />`}
         title="Block buttons" 
       />
-      <span class='prose'>  
+      <span className='prose'>  
         <h2>Active state</h2>
         <p>To set a button's active state simply set the component's active prop.</p>
       </span>
       <br/>
       <Showcase 
-        class="w-full p-4 text-center m-auto space-x-2" 
+        className="w-full p-4 text-center m-auto space-x-2" 
         component={
           <>
             <Button variant="primary" text="Active Button" active />
@@ -148,13 +148,13 @@ function Buttons() {
           `<Button variant="primary" text="Active Button" active />`} 
         title="Active buttons" 
       />
-      <span class='prose'>  
+      <span className='prose'>  
         <h2>Disabled state</h2>
         <p>Make buttons look inactive by adding the disabled prop to.</p>
       </span>
       <br/>
       <Showcase 
-        class="w-full p-4 text-center m-auto space-x-2" 
+        className="w-full p-4 text-center m-auto space-x-2" 
         component={
           <>
             <Button variant="primary" text="Disabled Button" disabled />
@@ -166,13 +166,13 @@ function Buttons() {
           `<Button variant="secondary" text="Disabled Button" disabled />`} 
         title="Disabled buttons" 
       />
-      <span class='prose'>  
+      <span className='prose'>  
         <h2>Loading state</h2>
         <p>Convert buttons to a loading state by adding the loading prop.</p>
       </span>
       <br/>
       <Showcase 
-        class="w-full p-4 text-center m-auto space-x-2" 
+        className="w-full p-4 text-center m-auto space-x-2" 
         component={
           <>
             <Button variant="primary" text="Button" loading />
@@ -184,13 +184,13 @@ function Buttons() {
           `<Button variant="secondary" text="Button" loading />`}  
         title="Loading" 
       />
-      <span class='prose'>  
+      <span className='prose'>  
         <h2>Icons</h2>
         <p>Add icons to your buttons by adding the icon prop</p>
       </span>
       <br/>
       <Showcase 
-        class="w-full p-4 text-center m-auto space-x-2" 
+        className="w-full p-4 text-center m-auto space-x-2" 
         component={
           <>
             <Button variant="primary" text="Button" icon={<ExclamationIcon/>} />
@@ -202,13 +202,13 @@ function Buttons() {
           `<Button variant="secondary" text="Button" icon={<ExclamationIcon/>} />`}
         title="Icon Buttons" 
       />
-        <span class='prose'>  
+        <span className='prose'>  
         <h2>Secondary Icons</h2>
         <p>Add secondary icons to your buttons by adding the secondaryIcon prop</p>
       </span>
       <br/>
       <Showcase 
-        class="w-full p-4 text-center m-auto space-x-2" 
+        className="w-full p-4 text-center m-auto space-x-2" 
         component={
           <>
             <Button variant="primary" text="Button" secondaryIcon={<ChevronDownIcon/>} />
@@ -220,7 +220,7 @@ function Buttons() {
           `<Button variant="secondary" text="Button" secondaryIcon={<ChevronDownIcon/>} />`}
         title="Secondary Icons" 
       />
-      <span class='prose'>  
+      <span className='prose'>  
         <h2>Icon sizes</h2>
         <p>Change the size of button icons by using the iconSize prop. <br/>
         Add iconSize="xs", iconSize="sm", iconSize="lg" iconSize="xl" for additional sizes.</p>
@@ -228,7 +228,7 @@ function Buttons() {
       </span>
       <br/>
       <Showcase 
-        class="w-full p-4 text-center m-auto space-x-2" 
+        className="w-full p-4 text-center m-auto space-x-2" 
         component={
           <>
             <Button variant="primary" text="Icon SM" iconSize="sm" icon={<ExclamationIcon/>} />
@@ -242,13 +242,13 @@ function Buttons() {
           `<Button variant="primary" text="Icon XL" iconSize="xl" icon={<ExclamationIcon/>} />`}
         title="Icon sizes" 
       />
-      <span class='prose'>  
+      <span className='prose'>  
         <h2>Icon only buttons</h2>
         <p>Create icon only buttons by removing the text prop.</p>
       </span>
       <br/>
       <Showcase 
-        class="w-full p-4 text-center m-auto space-x-2" 
+        className="w-full p-4 text-center m-auto space-x-2" 
         component={
           <>
             <Button variant="primary" secondaryIcon={<DotsHorizontalIcon/>} />
@@ -260,47 +260,47 @@ function Buttons() {
           `<Button variant="secondary" secondaryIcon={<DotsHorizontalIcon/>} />`}
         title="Icon Buttons" 
       />
-      <span class='prose'>  
+      <span className='prose'>  
         <h2>Notifications</h2>
         <p>Create notification badges by passing in custom markup.</p>
       </span>
       <br/>
       <Showcase 
-        class="w-full p-4 text-center m-auto space-x-2" 
+        className="w-full p-4 text-center m-auto space-x-2" 
         component={
           <Button variant="outline_light" size="md" icon={<BellIcon/>} iconSize="lg" rounded > 
-            <span class="sr-only">View notifications</span>
-            <span class="absolute top-0 right-0 block w-2 h-2 bg-red-400 rounded-full ring-2 ring-white"></span>
+            <span className="sr-only">View notifications</span>
+            <span className="absolute top-0 right-0 block w-2 h-2 bg-red-400 rounded-full ring-2 ring-white"></span>
           </Button>
         } 
         syntaxBlock={
           `<Button variant="outline_light" size="md" icon={<BellIcon/>} iconSize="lg" rounded > \n` +
-          `  <span class="sr-only">View notifications</span> \n` +
-          `  <span class="absolute top-0 right-0 block w-2 h-2 bg-red-400 rounded-full ring-2 ring-white"></span> \n` +
+          `  <span className="sr-only">View notifications</span> \n` +
+          `  <span className="absolute top-0 right-0 block w-2 h-2 bg-red-400 rounded-full ring-2 ring-white"></span> \n` +
           `</Button>`}
         title="Notification Button" 
       />
-      <span class='prose'>  
+      <span className='prose'>  
         <h2>Avatars</h2>
         <p>Create button backgrounds by passing in custom markup.</p>
       </span>
       <br/>
       <Showcase 
-        class="w-full p-4 text-center m-auto space-x-2" 
+        className="w-full p-4 text-center m-auto space-x-2" 
         component={
           <Button variant="dark" size="md" rounded suffixClasses="overflow-hidden">
             <span className="sr-only">User Profile</span>
-            <img src="https://avatars0.githubusercontent.com/u/39002455?v=4" aria-hidden="true" alt="touha98" class="object-cover w-full h-full top-0 absolute bottom-0 left-0 right-0 hover:opacity-80 transition duration-300 ease-in-out"></img>
+            <img src="https://avatars0.githubusercontent.com/u/39002455?v=4" aria-hidden="true" alt="touha98" className="object-cover w-full h-full top-0 absolute bottom-0 left-0 right-0 hover:opacity-80 transition duration-300 ease-in-out"></img>
           </Button>
         } 
         syntaxBlock={
           `<Button variant="dark" size="md" rounded suffixClasses="overflow-hidden"> \n` +
           `  <span className="sr-only">User Profile</span> \n` +
-          `  <img src="https://avatars0.githubusercontent.com/u/39002455?v=4" aria-hidden="true" alt="touha98" class="object-cover w-full h-full top-0 absolute bottom-0 left-0 right-0 hover:opacity-80 transition duration-300 ease-in-out"></img> \n` +
+          `  <img src="https://avatars0.githubusercontent.com/u/39002455?v=4" aria-hidden="true" alt="touha98" className="object-cover w-full h-full top-0 absolute bottom-0 left-0 right-0 hover:opacity-80 transition duration-300 ease-in-out"></img> \n` +
           `</Button>`}
         title="Avatar Buttons" 
       />
-      <span class='prose'>  
+      <span className='prose'>  
         <h2>API</h2>
         <h3>Button</h3>
       </span>
